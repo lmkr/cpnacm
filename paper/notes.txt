@@ -1,0 +1,19 @@
+The development of CPNs has been motivated by aim of developing a
+formally founded modelling for concurrent systems capable of modelling
+and validating system occurring in typical industrial projects. Petri
+nets provide the basic model to capture concurrency and
+synchronisation. Petri nets has at it very nature concurrency and is
+based on the approach of everything being concurrent unless it is
+explicitly synchronisation. Petri nets are, however, not well-suited
+for modelling large systems as models do not scale well in system
+parameters, and it is not particular suited for modelling data
+manipulation. To address this concern,...
+
+THe davantage of Petri nets is that they have few basic concept and
+still is able to expressa wide range of communication and
+synchronisation concepts.
+
+The majority of computing systems today relies inhereintely on
+communication and synchronisation between concurrent and parallel
+processes. When C.A. Petri conceined Petri nets in X and Y the
+computing system of that time ... (maybe this as a side bar?)
