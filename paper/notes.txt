@@ -1,3 +1,5 @@
+-- Section 1:
+
 The development of CPNs has been motivated by aim of developing a
 formally founded modelling for concurrent systems capable of modelling
 and validating system occurring in typical industrial projects. Petri
@@ -17,3 +19,27 @@ The majority of computing systems today relies inhereintely on
 communication and synchronisation between concurrent and parallel
 processes. When C.A. Petri conceined Petri nets in X and Y the
 computing system of that time ... (maybe this as a side bar?)
+
+
+The development of CPNs started in the early 80'es when distributed
+systems considered a major paeadigm for future computing systems. 
+
+The advant of the Internet and the increasing trend towards
+multi-cores architectrures implies that most computing system today is
+based on concurrently executing devices and software component that
+communicate and synchronise. Example range from cloud- and web-based
+enterprise application across mobile application to control and X
+within industrial automation and plant control.
+
+The mvotivation behind developed a modelling language for distributed
+system were - and is still doday - that designing such system can be
+quite challengding due to the complex behaviour introduces by
+concurnncy and communication. As concurrenc computinng also plays a
+still more critical role in sociery correctness and relibaliy of such
+systems is still a X issue.
+
+-- Section 2:
+
+A CPN model of a system is organised into a hierarcaily related set of
+modules that together captures the possible states of the system and
+action causing state changes. Figure~
