@@ -1,3 +1,6 @@
+Should we argue somewhere ahy a functional programming language is a
+good choice for CPNs?
+
 -- Section 1:
 
 The development of CPNs has been motivated by aim of developing a
@@ -43,3 +46,7 @@ systems is still a X issue.
 A CPN model of a system is organised into a hierarcaily related set of
 modules that together captures the possible states of the system and
 action causing state changes. Figure~
+
+Perhaps we should keep one coordinator - this makes the introduction
+of colour more gradual - and it makes it simpler to see the
+relationship to uncoloured Nets.
