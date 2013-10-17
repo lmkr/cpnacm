@@ -1,0 +1,53 @@
+\section{Introduction}
+
+The vast majority of IT systems today can be characterised as
+concurrent and distributed systems in that their operation inherently
+relies on communication, synchronisation, and resource sharing between
+concurrently executing software components and applications. This is a
+development that has been accelerated first with the pervasive
+presence of the Internet as a communication infrastructure, and in
+recent years by, e.g, cloud- and web-based services, mobile
+applications, and multi-core computing architectures.
+
+% main motivation and application domain of CPNs
+
+The development of Coloured Petri Nets (CPNs) was initiated in the
+early 80'es when distributed system was considered to become a major
+paradigm for future computing systems. The goal of the CPN modelling
+language was to develop a formally founded modelling language for
+concurrent system that would make it possible to formally analyse and
+validate concurrent systems, and which from a modelling perspective
+would scale to industrial systems. A main motivation behind the
+research into CPNs (and many other formaling modelling languages) was
+that the engineering of correct concurrent systems is a challenging
+task due of their complex behavior which may result in subtle bugs. As
+concurrent systems are becoming still more pervaise and critical to
+society, formal techniques for concurrent system was -- and still is
+-- a highly relevant technology to support the enginerring of reliable
+concurrent systems.
+
+% historical perspectic on development and roots
+
+At its very base, CPNs builds on the visionary work of C.~A Petri
+\cite{X} who already in the 60'es introduced Petri Nets as a formalism
+for concurrency an synchronisation. In Petri Nets, concurrency is a
+fundamental concept in that Petri Nets is inherently based on the idea
+that everything is (implicitly) concurrent unless explicitly
+synchronised. This is in contrast to many other modelling formalisms
+where concurrency must be explicitly introduced using parallel
+composition operators. A further advantage of Petri nets is that they
+rely on very few basic concepts, and is still able to model a wide
+range of communication and synchronisation concepts and patterns. A
+disadvantage of Petri nets in their basic form is, however, that they
+do not scale to large systems unless one models the systems at a very
+high level of abstraction. The primary reasons for this is that Petri
+nets are not suited for modelling sequental computation and data
+manipulation and they do not provide concepts that make it easy to
+scale models according to some system parameter, e.g,. increase the
+number of servers in a modelled system wiothout having to make major
+changes to the model.
+
+The shortcoming of ordinary Petri nets outlined above promted a
+research direction into the development of high-level Petri nets which
+... KURT TO ADD HISTORICAL PERSPECTIVE ON THE DEVELOPMENT OF
+HIGH-LEVEL NETS.
