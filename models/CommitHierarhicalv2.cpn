@@ -391,7 +391,7 @@
       </place>
       <trans id="ID1429909264"
              explicit="false">
-        <posattr x="-87.300000"
+        <posattr x="7.100000"
                  y="-55.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -408,7 +408,7 @@
                portsock="(ID1429909319,ID1429596369)(ID1429909324,ID1429615148)(ID1429909329,ID1429597939)(ID1429909336,ID1429601692)">
           <subpageinfo id="ID1429909379"
                        name="Coordinator">
-            <posattr x="-87.300000"
+            <posattr x="7.100000"
                      y="-217.750000"/>
             <fillattr colour="White"
                       pattern="Solid"
@@ -423,7 +423,7 @@
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1429909265">
-          <posattr x="-148.800000"
+          <posattr x="-54.400000"
                    y="114.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -437,7 +437,7 @@
                 version="3.4.0"/>
         </cond>
         <time id="ID1429909266">
-          <posattr x="-20.300000"
+          <posattr x="74.100000"
                    y="114.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -451,7 +451,7 @@
                 version="3.4.0"/>
         </time>
         <code id="ID1429909267">
-          <posattr x="-0.300000"
+          <posattr x="94.100000"
                    y="-245.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -465,7 +465,7 @@
                 version="3.4.0"/>
         </code>
         <channel id="ID1429909268">
-          <posattr x="-1.300000"
+          <posattr x="93.100000"
                    y="-55.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -479,7 +479,7 @@
                 version="3.4.0"/>
         </channel>
         <priority id="ID1429909269">
-          <posattr x="-177.800000"
+          <posattr x="-83.400000"
                    y="-224.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -495,7 +495,7 @@
       </trans>
       <trans id="ID1429913968"
              explicit="false">
-        <posattr x="399.100000"
+        <posattr x="307.900000"
                  y="-55.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -505,14 +505,14 @@
                   type="solid"/>
         <textattr colour="Black"
                   bold="false"/>
-        <text>Worker</text>
-        <box w="105.000000"
+        <text>Workers</text>
+        <box w="92.200000"
              h="317.500000"/>
         <subst subpage="ID1429913982"
                portsock="(ID1429914012,ID1429596369)(ID1429914017,ID1429597939)(ID1429914022,ID1429615148)(ID1429914027,ID1429601692)">
           <subpageinfo id="ID1429914064"
                        name="Worker">
-            <posattr x="399.100000"
+            <posattr x="307.900000"
                      y="-217.750000"/>
             <fillattr colour="White"
                       pattern="Solid"
@@ -527,7 +527,7 @@
         <binding x="7.200000"
                  y="-3.000000"/>
         <cond id="ID1429913969">
-          <posattr x="337.600000"
+          <posattr x="252.800000"
                    y="114.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -541,7 +541,7 @@
                 version="3.4.0"/>
         </cond>
         <time id="ID1429913970">
-          <posattr x="466.100000"
+          <posattr x="368.500000"
                    y="114.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -555,7 +555,7 @@
                 version="3.4.0"/>
         </time>
         <code id="ID1429913971">
-          <posattr x="486.100000"
+          <posattr x="388.500000"
                    y="-245.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -569,7 +569,7 @@
                 version="3.4.0"/>
         </code>
         <channel id="ID1429913972">
-          <posattr x="485.100000"
+          <posattr x="387.500000"
                    y="-55.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -583,7 +583,7 @@
                 version="3.4.0"/>
         </channel>
         <priority id="ID1429913973">
-          <posattr x="308.600000"
+          <posattr x="223.800000"
                    y="-224.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -616,7 +616,7 @@
         <placeend idref="ID1429596369"/>
         <bendpoint id="ID1429911966"
                    serial="1">
-          <posattr x="-87.300000"
+          <posattr x="82.300000"
                    y="67.500000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -661,7 +661,7 @@
         <placeend idref="ID1429615148"/>
         <bendpoint id="ID1429911708"
                    serial="1">
-          <posattr x="-87.300000"
+          <posattr x="84.700000"
                    y="-98.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -704,9 +704,9 @@
                    currentcyckle="2"/>
         <transend idref="ID1429909264"/>
         <placeend idref="ID1429597939"/>
-        <bendpoint id="ID1429912398"
+        <bendpoint id="ID1429965423"
                    serial="1">
-          <posattr x="3.100000"
+          <posattr x="79.100000"
                    y="-14.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -796,8 +796,8 @@
         <placeend idref="ID1429596369"/>
         <bendpoint id="ID1429933942"
                    serial="1">
-          <posattr x="291.900000"
-                   y="67.000000"/>
+          <posattr x="224.700000"
+                   y="67.500000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -886,7 +886,7 @@
         <placeend idref="ID1429615148"/>
         <bendpoint id="ID1429929280"
                    serial="1">
-          <posattr x="327.900000"
+          <posattr x="255.100000"
                    y="-98.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -960,6 +960,8 @@
       <hguideline id="ID1429910496"
                   y="-67.500000">
         <guideline_elm idref="ID1429596369"/>
+        <guideline_elm idref="ID1429911966"/>
+        <guideline_elm idref="ID1429933942"/>
       </hguideline>
       <hguideline id="ID1429910621"
                   y="55.000000">
@@ -969,6 +971,8 @@
       <hguideline id="ID1429910742"
                   y="98.750000">
         <guideline_elm idref="ID1429615148"/>
+        <guideline_elm idref="ID1429911708"/>
+        <guideline_elm idref="ID1429929280"/>
       </hguideline>
       <hguideline id="ID1429910901"
                   y="172.500000">
@@ -982,11 +986,11 @@
         <guideline_elm idref="ID1429596369"/>
       </vguideline>
       <vguideline id="ID1429928685"
-                  x="-87.300000">
+                  x="7.100000">
         <guideline_elm idref="ID1429909264"/>
       </vguideline>
       <vguideline id="ID1429928923"
-                  x="399.100000">
+                  x="307.900000">
         <guideline_elm idref="ID1429913968"/>
       </vguideline>
     </page>
@@ -1007,8 +1011,8 @@
 Votes</text>
         <ellipse w="142.000000"
                  h="48.000000"/>
-        <token x="-10.000000"
-               y="0.000000"/>
+        <token x="-23.000000"
+               y="1.000000"/>
         <marking x="0.000000"
                  y="0.000000"
                  hidden="false">
@@ -1109,18 +1113,17 @@ Acknowledgements</text>
                   type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
-        <text>Coordinator
-idle</text>
+        <text>Idle</text>
         <ellipse w="142.000000"
                  h="48.000000"/>
-        <token x="-52.000000"
-               y="27.000000"/>
-        <marking x="-16.000000"
-                 y="31.000000"
+        <token x="-26.000000"
+               y="1.000000"/>
+        <marking x="-1.000000"
+                 y="0.000000"
                  hidden="false">
-          <snap snap_id="0"
-                anchor.horizontal="3"
-                anchor.vertical="2"/>
+          <snap snap_id="2"
+                anchor.horizontal="1"
+                anchor.vertical="3"/>
         </marking>
         <type id="ID1429909287">
           <posattr x="-107.000000"
@@ -1137,8 +1140,8 @@ idle</text>
                 version="3.4.0">UNIT</text>
         </type>
         <initmark id="ID1429909288">
-          <posattr x="-82.000000"
-                   y="216.000000"/>
+          <posattr x="-109.000000"
+                   y="221.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -1318,8 +1321,8 @@ idle</text>
           <text tool="CPN Tools"
                 version="3.4.0">WorkerxVote</text>
         </type>
-        <initmark id="ID1429909331">
-          <posattr x="107.000000"
+        <initmark id="ID1429960198">
+          <posattr x="134.000000"
                    y="-6.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -1330,7 +1333,7 @@ idle</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="3.4.0">[]</text>
+                version="3.4.0"/>
         </initmark>
         <port id="ID1429909423"
               type="In">
@@ -1901,7 +1904,7 @@ Acknowledgements</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="3.4.0">Workers</text>
+                version="3.4.0">Worker.all ()</text>
         </annot>
       </arc>
       <arc id="ID1429909339"
@@ -2073,25 +2076,25 @@ Acknowledgements</text>
       </vguideline>
       <group id="ID1429938821"
              name="SendCanCommit">
+        <group_elm idref="ID1429909286"/>
+        <group_elm idref="ID1429909287"/>
+        <group_elm idref="ID1429909288"/>
+        <group_elm idref="ID1429909280"/>
+        <group_elm idref="ID1429909281"/>
+        <group_elm idref="ID1429909282"/>
+        <group_elm idref="ID1429909319"/>
+        <group_elm idref="ID1429909320"/>
+        <group_elm idref="ID1429909321"/>
         <group_elm idref="ID1429909289"/>
         <group_elm idref="ID1429909292"/>
         <group_elm idref="ID1429909293"/>
         <group_elm idref="ID1429909294"/>
         <group_elm idref="ID1429909290"/>
         <group_elm idref="ID1429909291"/>
-        <group_elm idref="ID1429909286"/>
-        <group_elm idref="ID1429909287"/>
-        <group_elm idref="ID1429909288"/>
         <group_elm idref="ID1429909307"/>
         <group_elm idref="ID1429909308"/>
-        <group_elm idref="ID1429909280"/>
-        <group_elm idref="ID1429909281"/>
-        <group_elm idref="ID1429909282"/>
         <group_elm idref="ID1429909309"/>
         <group_elm idref="ID1429909310"/>
-        <group_elm idref="ID1429909319"/>
-        <group_elm idref="ID1429909320"/>
-        <group_elm idref="ID1429909321"/>
         <group_elm idref="ID1429909322"/>
         <group_elm idref="ID1429909323"/>
       </group>
@@ -2932,18 +2935,17 @@ OneVote</text>
                   type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
-        <text>Worker
-Idle</text>
+        <text>Idle</text>
         <ellipse w="142.000000"
                  h="48.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-20.500000"
-                 y="29.000000"
+        <marking x="-1.000000"
+                 y="0.000000"
                  hidden="false">
-          <snap snap_id="0"
-                anchor.horizontal="0"
-                anchor.vertical="0"/>
+          <snap snap_id="2"
+                anchor.horizontal="1"
+                anchor.vertical="2"/>
         </marking>
         <type id="ID1429913985">
           <posattr x="540.000000"
@@ -2960,7 +2962,7 @@ Idle</text>
                 version="3.4.0">Worker</text>
         </type>
         <initmark id="ID1429913986">
-          <posattr x="525.500000"
+          <posattr x="538.000000"
                    y="148.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2971,7 +2973,7 @@ Idle</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="3.4.0">Workers</text>
+                version="3.4.0">Worker.all ()</text>
         </initmark>
       </place>
       <place id="ID1429913987">
@@ -2985,8 +2987,7 @@ Idle</text>
                   type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
-        <text>Worker
-Waiting</text>
+        <text>Waiting</text>
         <ellipse w="142.000000"
                  h="48.000000"/>
         <token x="-10.000000"
@@ -3028,7 +3029,7 @@ Waiting</text>
         </initmark>
       </place>
       <place id="ID1429914012">
-        <posattr x="205.000000"
+        <posattr x="257.000000"
                  y="71.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -3041,17 +3042,17 @@ Waiting</text>
         <text>CanCommit</text>
         <ellipse w="100.000000"
                  h="40.000000"/>
-        <token x="-10.000000"
-               y="0.000000"/>
-        <marking x="0.000000"
+        <token x="-64.000000"
+               y="24.000000"/>
+        <marking x="-1.000000"
                  y="0.000000"
                  hidden="false">
-          <snap snap_id="0"
-                anchor.horizontal="0"
-                anchor.vertical="0"/>
+          <snap snap_id="2"
+                anchor.horizontal="1"
+                anchor.vertical="2"/>
         </marking>
         <type id="ID1429914013">
-          <posattr x="205.000000"
+          <posattr x="257.000000"
                    y="40.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3065,7 +3066,7 @@ Waiting</text>
                 version="3.4.0">Worker</text>
         </type>
         <initmark id="ID1429914014">
-          <posattr x="275.000000"
+          <posattr x="327.000000"
                    y="94.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3080,7 +3081,7 @@ Waiting</text>
         </initmark>
         <port id="ID1429914096"
               type="In">
-          <posattr x="166.000000"
+          <posattr x="218.000000"
                    y="54.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3093,7 +3094,7 @@ Waiting</text>
         </port>
       </place>
       <place id="ID1429914017">
-        <posattr x="205.000000"
+        <posattr x="257.000000"
                  y="-14.000000"/>
         <fillattr colour="White"
                   pattern=""
@@ -3106,17 +3107,17 @@ Waiting</text>
         <text>Votes</text>
         <ellipse w="100.000000"
                  h="40.000000"/>
-        <token x="-56.000000"
-               y="21.000000"/>
-        <marking x="0.000000"
+        <token x="-64.000000"
+               y="24.000000"/>
+        <marking x="-1.000000"
                  y="0.000000"
                  hidden="false">
-          <snap snap_id="0"
-                anchor.horizontal="0"
-                anchor.vertical="0"/>
+          <snap snap_id="2"
+                anchor.horizontal="1"
+                anchor.vertical="2"/>
         </marking>
         <type id="ID1429914018">
-          <posattr x="205.000000"
+          <posattr x="257.000000"
                    y="-45.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3130,7 +3131,7 @@ Waiting</text>
                 version="3.4.0">WorkerxVote</text>
         </type>
         <initmark id="ID1429951003">
-          <posattr x="275.000000"
+          <posattr x="327.000000"
                    y="9.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3145,7 +3146,7 @@ Waiting</text>
         </initmark>
         <port id="ID1429914100"
               type="Out">
-          <posattr x="166.000000"
+          <posattr x="218.000000"
                    y="-30.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3158,7 +3159,7 @@ Waiting</text>
         </port>
       </place>
       <place id="ID1429914022">
-        <posattr x="205.000000"
+        <posattr x="257.000000"
                  y="-98.750000"/>
         <fillattr colour="White"
                   pattern=""
@@ -3181,7 +3182,7 @@ Waiting</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1429914023">
-          <posattr x="205.000000"
+          <posattr x="257.000000"
                    y="-129.750000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3195,7 +3196,7 @@ Waiting</text>
                 version="3.4.0">WorkerxDecision</text>
         </type>
         <initmark id="ID1429914024">
-          <posattr x="275.000000"
+          <posattr x="327.000000"
                    y="-74.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3210,7 +3211,7 @@ Waiting</text>
         </initmark>
         <port id="ID1429914104"
               type="In">
-          <posattr x="166.000000"
+          <posattr x="218.000000"
                    y="-115.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3223,7 +3224,7 @@ Waiting</text>
         </port>
       </place>
       <place id="ID1429914027">
-        <posattr x="205.000000"
+        <posattr x="257.000000"
                  y="-201.250000"/>
         <fillattr colour="White"
                   pattern=""
@@ -3246,7 +3247,7 @@ Waiting</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1429914028">
-          <posattr x="205.000000"
+          <posattr x="257.000000"
                    y="-232.250000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3260,7 +3261,7 @@ Waiting</text>
                 version="3.4.0">Worker</text>
         </type>
         <initmark id="ID1429914029">
-          <posattr x="275.000000"
+          <posattr x="327.000000"
                    y="-177.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3275,7 +3276,7 @@ Waiting</text>
         </initmark>
         <port id="ID1429914108"
               type="Out">
-          <posattr x="166.000000"
+          <posattr x="218.000000"
                    y="-218.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3738,7 +3739,7 @@ else empty</text>
         <transend idref="ID1429913990"/>
         <placeend idref="ID1429914012"/>
         <annot id="ID1429914016">
-          <posattr x="324.500000"
+          <posattr x="350.500000"
                    y="63.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3770,8 +3771,8 @@ else empty</text>
         <transend idref="ID1429913990"/>
         <placeend idref="ID1429914017"/>
         <annot id="ID1429914021">
-          <posattr x="328.500000"
-                   y="-11.000000"/>
+          <posattr x="353.500000"
+                   y="-12.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3802,8 +3803,8 @@ else empty</text>
         <transend idref="ID1429913996"/>
         <placeend idref="ID1429914022"/>
         <annot id="ID1429914026">
-          <posattr x="333.000000"
-                   y="-123.000000"/>
+          <posattr x="383.000000"
+                   y="-138.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -3834,7 +3835,7 @@ else empty</text>
         <transend idref="ID1429913996"/>
         <placeend idref="ID1429914027"/>
         <annot id="ID1429914031">
-          <posattr x="334.000000"
+          <posattr x="357.000000"
                    y="-191.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -3849,12 +3850,46 @@ else empty</text>
         </annot>
       </arc>
       <vguideline id="ID1429937986"
-                  x="205.000000">
+                  x="257.000000">
         <guideline_elm idref="ID1429914012"/>
         <guideline_elm idref="ID1429914017"/>
         <guideline_elm idref="ID1429914022"/>
         <guideline_elm idref="ID1429914027"/>
       </vguideline>
+      <group id="ID1429978726"
+             name="ReceiveCanCommit">
+        <group_elm idref="ID1429913984"/>
+        <group_elm idref="ID1429913985"/>
+        <group_elm idref="ID1429913986"/>
+        <group_elm idref="ID1429913964"/>
+        <group_elm idref="ID1429913965"/>
+        <group_elm idref="ID1429913966"/>
+        <group_elm idref="ID1429913987"/>
+        <group_elm idref="ID1429913988"/>
+        <group_elm idref="ID1429913989"/>
+        <group_elm idref="ID1429914012"/>
+        <group_elm idref="ID1429914013"/>
+        <group_elm idref="ID1429914014"/>
+        <group_elm idref="ID1429914017"/>
+        <group_elm idref="ID1429914018"/>
+        <group_elm idref="ID1429951003"/>
+        <group_elm idref="ID1429913990"/>
+        <group_elm idref="ID1429913993"/>
+        <group_elm idref="ID1429913994"/>
+        <group_elm idref="ID1429913995"/>
+        <group_elm idref="ID1429913991"/>
+        <group_elm idref="ID1429913992"/>
+        <group_elm idref="ID1429914002"/>
+        <group_elm idref="ID1429914003"/>
+        <group_elm idref="ID1429914004"/>
+        <group_elm idref="ID1429914005"/>
+        <group_elm idref="ID1429914010"/>
+        <group_elm idref="ID1429914011"/>
+        <group_elm idref="ID1429914015"/>
+        <group_elm idref="ID1429914016"/>
+        <group_elm idref="ID1429914020"/>
+        <group_elm idref="ID1429914021"/>
+      </group>
     </page>
     <page id="ID1429654752">
       <pageattr name="StateSpace"/>
@@ -6065,8 +6100,8 @@ Commit&apos;Worker_Waiting 1: empty</text>
     </options>
     <binders>
       <cpnbinder id="ID2222"
-                 x="326"
-                 y="45"
+                 x="112"
+                 y="75"
                  width="1108"
                  height="653">
         <sheets>
@@ -6089,7 +6124,7 @@ Commit&apos;Worker_Waiting 1: empty</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1429917883"
-                    panx="48.000000"
+                    panx="51.000000"
                     pany="-30.000000"
                     zoom="1.000000"
                     instance="ID1429909380">
@@ -6108,20 +6143,21 @@ Commit&apos;Worker_Waiting 1: empty</text>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1429937589"
-                    panx="-421.000000"
+                    panx="-415.000000"
                     pany="-26.000000"
                     zoom="1.000000"
                     instance="ID1429914065">
             <zorder>
               <position value="0"/>
+              <position value="1"/>
             </zorder>
           </cpnsheet>
         </sheets>
         <zorder>
           <position value="1"/>
-          <position value="2"/>
           <position value="3"/>
           <position value="0"/>
+          <position value="2"/>
           <position value="4"/>
         </zorder>
       </cpnbinder>
