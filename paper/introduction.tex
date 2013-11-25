@@ -29,23 +29,23 @@ concurrent systems.
 % historical perspectic on development and roots
 
 At its very base, CPNs builds on the visionary work of C.~A Petri
-\cite{X} who already in the 60'es introduced Petri Nets as a formalism
-for concurrency and synchronization. In Petri Nets, concurrency is a
-fundamental concept in that Petri Nets is inherently based on the idea
-that everything is (implicitly) concurrent unless explicitly
-synchronized. This is in contrast to many other modeling formalisms
-where concurrency must be explicitly introduced using parallel
-composition operators. A further advantage of Petri nets is that they
-rely on very few basic concepts, and is still able to model a wide
-range of communication and synchronization concepts and patterns. A
-disadvantage of Petri nets in their basic form is, however, that they
-do not scale to large systems unless one models the systems at a very
-high level of abstraction. The primary reasons for this is that Petri
-nets are not suited for modeling sequential computation and data
-manipulation and they do not provide concepts that make it easy to
-scale models according to some system parameter, e.g,. increase the
-number of servers in a modeled system without having to make major
-changes to the model.
+\cite{capetri:thesis} who already in the 60'es introduced Petri Nets
+as a formalism for concurrency and synchronization. In Petri Nets,
+concurrency is a fundamental concept in that Petri Nets is inherently
+based on the idea that everything is (implicitly) concurrent unless
+explicitly synchronized. This is in contrast to many other modeling
+formalisms where concurrency must be explicitly introduced using
+parallel composition operators. A further advantage of Petri nets is
+that they rely on very few basic concepts, and is still able to model
+a wide range of communication and synchronization concepts and
+patterns. A disadvantage of Petri nets in their basic form is,
+however, that they do not scale to large systems unless one models the
+systems at a very high level of abstraction. The primary reasons for
+this is that Petri nets are not suited for modeling sequential
+computation and data manipulation and they do not provide concepts
+that make it easy to scale models according to some system parameter,
+e.g,. increase the number of servers in a modeled system without
+having to make major changes to the model.
 
 \ignore{
 The shortcoming of ordinary Petri nets outlined above prompted a
