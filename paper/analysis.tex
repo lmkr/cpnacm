@@ -1,0 +1,32 @@
+\section{Sidebar: State Spaces and Model Checking}
+
+State space exploration is the main technique used for verifying
+behavioral properties of CPN models. In its basic form, a state space
+is a directed graph consisting of a node for each reachable marking
+(state) of the CPN model and edges corresponding to occurrences of
+enabled binding elements. From a constructed state space it is
+possible to automatically verify a wide range of standard behavioral
+properties of Petri nets (such as boundedness-, home-, and liveness
+properties). In addition, state spaces of CPN models can be used to
+perform model checking of behavioral properties expressed using
+temporal logics such as CTL and LTL. The main limitation of state
+space methods is the inherint state exploration problem which implies
+that state spaces in their basic form are often too large to be with
+the available computing power. Many advanced techqniues exists to
+combat the state explosion problem, and most of these can be applied
+also in the context of CPN models. 
+
+\section{Sidebar: Performance Analysis}
+
+Simulation-based performance analysis is the main technique available
+for conducting quantative analysis of timed CPN models. The basic idea
+of simulation-based performance analysis is to conduct a number of
+lenghty simulations of the CPN model under consideration. During the
+lengthy simulations data on, e.g., on queue length and delays, are
+collected. Data collection is based on the concept of monitors that
+observes simulations and write the extracted date into log files for
+post processing or directly compute key performance figures such as
+averages, standard deviation, and confidence intervals. In addition,
+batch simulations can used to explore the parameter space of the model
+and conduct multiple simulation for each parameter in order to obtain
+statistically reliable results.
