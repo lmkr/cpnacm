@@ -8,14 +8,14 @@ definition of CPNs is referred to \cite{newcpnbook}.
 
 % modules - substitution transitions
 
-The CPN model of the two-phase commit system is comprised of 4
+The CPN model of the two-phase commit system is comprised of four
 \concept{modules} hierarchically organized into three
 levels. Figure~\ref{fig:commit} shows the top-level module which
 consists of two \concept{substitution transitions} (drawn as
 rectangles with double-lined borders) representing the
 \figitem{Coordinator} and the \figitem{Workers} in the system. Each of
-the substitution transitions has an associated \concept{submodule} that
-model the behavior of the coordinator and the workers,
+the substitution transitions has an associated \concept{submodule}
+that model the behavior of the coordinator and the workers,
 respectively. The name of the submodule is written in the rectangular
 tag positioned at the bottom of each substitution transition.
 
@@ -41,7 +41,8 @@ may reside on a place is determined by the \concept{type} of the place
 places are called \concept{color sets}. Figure~\ref{fig:coloursets}
 lists the definitions of the color sets used for the four places in
 Fig.~\ref{fig:commit}. These color sets are defined using the CPN ML
-programming language.
+programming language which is based on the functional programming language
+Standard ML \cite{X}.
 
 The \smlcode{Worker} color set is an indexed type consisting of the
 values \smlcode{wrk(1),wrk(2),...,wrk(W)} where the symbolic constant
@@ -89,9 +90,10 @@ data values (colors) from the color set of the place. The
 (and omitted if the initial marking is the empty multi-set). For the
 places in Fig.~\ref{fig:commit} all places are empty in the initial
 marking. Initially, the \concept{current marking} of a CPN model
-equals the initial marking. When a CPN model is executed occurrences of
-enabled transitions consume and produce tokens on the places which
-will change the \concept{current marking} of the CPN model.
+equals the initial marking. When a CPN model is executed
+\concept{occurrences} of \concept{enabled transitions} consume and
+produce tokens on the places which will change the \concept{current
+  marking} of the CPN model.
 
  
 % coordinator  - port places
@@ -207,30 +209,6 @@ the votes from the worker processes.
 
 % comparison to low-level nets
 
-By setting the symbolic constant \smlcode{W} (see
-Fig.~\ref{fig:coloursets}) we can easily configure the model to handle,
-e.g., five workers. With ordinary Petri nets we would have had to
-create a copy of the \figitem{CanCommit} place for each worker. In
-particular, we would have to make changes to the net structure
-(places, transitions, arcs) when changing the number of workers. This
-shows that CPNs provides a means for easily creating parameterizable
-models and also that it enables more compact modeling as we only need
-a single instance of the \figitem{CanCommit} place in order to
-accommodate any finite number of workers. 
-
-\begin{itemize}
-\item WE COULD EABORATE MORE ON THIS BY DRAWING THE CORRESPONDING
-  PT-NET FOR THE CANCOMMIT TRANSITION. THAT WOULD ILLUSTRATE UNFOLDING
-  OF PLACES (see comment at the end of this section that proposes
-  illustration of unfolding transition. Perhaps it is a good approach
-  to split the introduction of unfolding in two steps. Then at the end
-  of the section we can mention that any CPNs can be unfolder to a
-  possibly infinite behaviorally equivalent PT-nets. The two example
-  that we have in this section would then nicely illustrate how. It
-  would also be possible to factor this into a seperate section in
-  order to avoid that this section becomes overlong in comparison with
-  the other section.  
-\end{itemize}
 
 %\com{Maybe we could have shown
 %  the corresponding fragment as a Place/Transition net? In this case we need more places - when we get to the worker we could also need to duplicate transition as per bindings}
@@ -273,7 +251,7 @@ in the current marking. The arc expressions on the surrounding arcs of
 the \figitem{ReceiveCanCommit} transition are more complex than the
 arc expressions of the \figitem{SendCanCommit} transition in the
 \figitem{Coordinator} module considered earlier in that they contain
-the \smlcode{free variables} \smlcode{w} and \smlcode{vote} defined in
+the \concept{free variables} \smlcode{w} and \smlcode{vote} defined in
 Fig.~\ref{fig:coloursets}. This means that in order to talk about the
 enabling and occurrence of transition \smlcode{ReceiveCanCommit}, we
 need to assign values to these variables in order to evaluate the
@@ -311,14 +289,14 @@ is enabled in the marking shown in Fig.~\ref{fig:commit}.
 The tokens produced on output places when a transition occurs in an
 enabled binding is determined by evaluating the output arc expressions
 of the transition in the given binding. Consider again the binding
-element $b_{1Y}$. The output arc expression \smlcode{(w,vote)} will
-evaluate to \smlcode{(wrk(1),Yes)} and this token will be added to
+element $b_{1Y}$. The output arc expression \smlcode{(w,vote)}
+evaluates to \smlcode{(wrk(1),Yes)} and this token will be added to
 place \smlcode{Votes} to inform the coordinator that worker 1 votes
 yes to committing the transaction. The arc expression on the arc from
 \figitem{ReceiveCanCommit} to \figitem{WaitingDecision} is an
-if-then-else expression which in the binding $b_{1Y}$ will evaluate to
-the multi-set $1`wrk(1)$ which will be added to the tokens on place
-\figitem{Waiting}. The if-then-else expression on the arc from
+if-then-else expression which in the binding $b_{1Y}$ evaluates to the
+multi-set \smlcode{1`wrk(1)} which will be added to the tokens on
+place \figitem{Waiting}. The if-then-else expression on the arc from
 \figitem{ReceiveCanCommit} to \figitem{Idle} evaluates to the
 \smlcode{empty} multi-set and hence no tokens will be added to place
 \figitem{Idle} in this case. Figure~\ref{fig:receivecancommit} shows
@@ -327,7 +305,7 @@ the marking resulting from an occurrence of the $b_{1Y}$ binding.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=.5]{figures/ReceiveCanCommit.eps}
-\caption{Current marking after occurrence of \figitem{ReceiveCanCommit}.}
+\caption{Current marking after \figitem{ReceiveCanCommit}.}
 \label{fig:receivecancommit}
 \end{figure}
 
@@ -368,15 +346,19 @@ enabled bindings that CPNs inherit from Petri nets is that theses can
 be executed in any interleaved order and the resulting marking will be
 the same independently of the interleaved execution considered.
 
-\begin{itemize}
+In addition to the language concept introduced about CPNs also
+includes a notion of time that makes it possible to model the time
+taken by different activities. The time concept of CPNs is inspired by
+the work of Wil van der Aalst \cite{X}. It is based the introduction
+of a \concept{global model clock} that represents the current model
+time and on attaching \concept{time stamps} to tokens in addition to
+the token colors. The time stamp of a token specifies the earliest
+model time at which the token can be removed by the occurrence of a
+transition, and delay inscriptions on the transitions and arcs are used
+to assign timestamps to tokens produced by transitions.. The global
+model clock is always advanced to the earliest next time at which a
+transition becomes enabled, and the model stays at the current model
+time until no more transitions are enabled. The time concept provides
+the foundation for conducting simulation-based performance analysis of
+CPN models (see sidebar on Performance Analysis).
 
-\item HERE WE COULD MAKE A FURTHER LINK TO PT-NETS BY SHOWING THE
-  FRAGMENT CORRESPONDING TO RECEIVECANCOMMIT. THAT WOULD ILLUSTRATE
-  UNFOLDING OF TRANSITIONS.
-
-\item HERE WE COULD BRIEFLY MENTION GUARDS. 
-
-\item WE COULD BRIEFLY TALK ABOUT MODELING TIME IF WE SKIP HAVING
-  A SECTION ON THIS.
-
-\end{itemize}
