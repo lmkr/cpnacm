@@ -31,87 +31,90 @@ concurrent systems.
 At its origin, CPNs builds on Petri nets (see sidebar on Petri nets)
 that were introduced by Carl Adam Petri in his doctoral thesis
 published in 1962 \cite{capetri:thesis} as a formalism for concurrency
-and synchronization. This was far ahead of the time where distributed
-systems were invented and computers started to have parallel
-processes. At that time, programs and processing were considered to be
-sequential and deterministic. Hence, it was extremely visionary of
-Carl Adam Petri to predict the importance of being able to understand
-and characterize the basic concepts of concurrency. In Petri nets,
-concurrency is a fundamental concept in that Petri nets is inherently
-based on the idea that behaviour is (implicitly) concurrent unless
-explicitly synchronized. This is in contrast to many other modeling
-formalisms where concurrency must be explicitly introduced using
-parallel composition operators. A further advantage of Petri nets is
-that they rely on very few basic concepts, and is still able to model
-a wide range of communication and synchronization concepts and
-patterns.
+and synchronization. The introduction of Petri Nets by C.A. Petri was
+far ahead of the time where distributed systems were invented and
+computers started to have parallel processes. At that time, programs
+and processing were considered to be sequential and
+deterministic. Hence, it was extremely visionary of C.A. Petri to
+predict the importance of being able to understand and characterize
+the basic concepts of concurrency. In Petri nets, concurrency is a
+fundamental concept in that Petri nets is inherently based on the idea
+that behavior is (implicitly) concurrent unless explicitly
+synchronized. This is in contrast to many other modeling formalisms
+where concurrency must be explicitly introduced using parallel
+composition operators. A further advantage of Petri nets is that they
+rely on very few basic concepts, and is still able to model a wide
+range of communication and synchronization concepts and patterns.\\
 
-\paragraph*{\textsc{\textbf{Sidebar: Petri Nets}}}
-A Petri net is a directed bi-partite graph with nodes consisting of
-places (drawn as ellipses) and transitions (drawn as rectangles). The
-state of a Petri called a marking consists of a distribution of tokens
-(drawn as black dots) positioned on the places and the execution of a
-Petri net consists of occurrences of enabled transitions removed
-tokens from input places and adding tokens to output places as
-described by integer arc weights thereby changing the current state
-(marking) of the Petri net.\hfill $\qed$
-
+%\noindent\rule{\columnwidth}{0.2em}
+\paragraph*{\textsc{\textbf{SIDEBAR I: Petri Nets}}}
+Petri nets in their basic form are called Place/Transition nets (PTNs)
+and is a directed bi-partite graph with nodes consisting of places
+(drawn as ellipses) and transitions (drawn as rectangles). The state
+of a Petri is called a marking and consists of a distribution of
+tokens (drawn as black dots) positioned on the places. The execution
+of a Petri net (also referred to as the token game) consists of
+occurrences of enabled transitions removed tokens from input places
+and adding tokens to output places as described by integer arc weights
+thereby changing the current state (marking) of the Petri
+net.\hfill$\qed$ \\
+%\noindent\rule{\columnwidth}{0.2em}
 % disadvantages - need for further development
 
-In the decade following the introduction of Petri nets by C.~A. Petri,
-Petri nets were widely accepted as one of the most well-founded
-theories to describe important behavioral concepts such as
-concurrency, conflict, synchronization and resource sharing. Petri
-nets were also used to model and analyze smaller concurrent
-systems. However, the practical use soon revealed a serious
-shortcoming. Petri nets (in their basic form) do not scale to large
-systems unless one models the systems at a very high level of
-abstraction. The primary reasons for this is that Petri nets are not
-well-suited for modeling systems in which data and manipulation of
-data plays a crucial role. Furthermore, Petri nets did not provide
-concepts that made it easy to scale models according to some system
-parameter, e.g,. increase the number of servers in a modeled system
-without having to make major changes to the model. This implied that
-the use of Petri nets for practical modelling were staggering. To
-remedy this situation many researchers proposed different ad-hoc
-extensions to Petri nets. This created a large zoo of different Petri
-net modeling languages. Many ad-hoc extensions were not well-defined,
-and even when they were, they often had fundamental theoretical
-shortcomings. Whenever a new ad-hoc extension was introduced, all the
-basic concepts and analysis methods had to be redefined - to apply for
-the extended Petri net language (with the ad-hoc extension). With the
-invention of the first (text-based) computer tools to support the
-analysis of Petri net models, the situation became acute. Whenever a
-new ad-hoc extension was introduced (to handle a modeling shortcoming)
-all existing computer tools became void, and could only be used after
-time-consuming and error-prone reprogramming. Hence, there was an
-urgent need to develop a class of Petri nets that were general enough
-to handle a large variety of different application areas without the
-need of making ad-hoc extensions.
+In the decade following the introduction by C.~A. Petri, Petri nets
+were widely accepted as one of the most well-founded theories to
+describe important behavioral concepts such as concurrency, conflict,
+synchronization and resource sharing. Petri nets were also used to
+model and analyze smaller concurrent systems. However, the practical
+use soon revealed a serious shortcoming. Petri nets (in their basic
+form) do not scale to large systems unless one models the systems at a
+very high level of abstraction. The primary reasons for this is that
+Petri nets are not well-suited for modeling systems in which data and
+manipulation of data plays a crucial role. Furthermore, Petri nets did
+not provide concepts that made it easy to scale models according to
+some system parameter, e.g,. increase the number of servers in a
+modeled system without having to make major changes to the model. This
+implied that the use of Petri nets for practical modelling were
+staggering. To remedy this situation many researchers proposed
+different ad-hoc extensions to Petri nets. This created a large zoo of
+different Petri net modeling languages. Many ad-hoc extensions were
+not well-defined, and even when they were, they often had fundamental
+theoretical problems. Whenever a new ad-hoc extension was introduced,
+all the basic concepts and analysis methods had to be redefined -- to
+apply for the extended Petri net language (with the ad-hoc
+extension). With the invention of the first (text-based) computer
+tools to support the analysis of Petri net models, the situation
+became acute. Whenever a new ad-hoc extension was introduced (to
+handle a modeling shortcoming) all existing computer tools became
+void, and could only be used after time-consuming and error-prone
+reprogramming. Hence, there was an urgent need to develop a class of
+Petri nets that were general enough to handle a large variety of
+different application areas without the need of making ad-hoc
+extensions.
 
 The first successful step towards a common more powerful class of
 Petri nets were taken by Genrich and Lautenbach in 1979 with the
 introduction of Predicate/Transition Nets (PrT nets)
 \cite{genrich:81}. Their work was inspired by earlier work on
 transition nets with \concept{colored tokens} by Schiffers and Wedde
-\cite{X} and transition nets with \concept{complex conditions}
-\cite{Y} by Shapiro. The basic idea behind PrT nets was to introduce a
-set of colored tokens which can be distinguished from each other - in
-contrast to the indistinguishable black tokens in basic Petri nets. In
-this way it became possible to model different processes in a single
-subnet. PrT nets used arc expressions to define how transitions can
-occur in different ways (occurrence modes) depending of the colors of
-the involved input and output tokens. The invention of colored
-distinguishable tokens in PrT nets was a gigantic step forward -- but
-it still had some limitations. PrT nets only had one set of token
-colors, and all places have to use this set (or Cartesian products
-based on this set).
+\cite{schiffers:78} and transition nets with \concept{complex
+  conditions} \cite{Y} by Shapiro. The basic idea behind PrT nets was
+to introduce a set of colored tokens which can be distinguished from
+each other -- in contrast to the indistinguishable black tokens in
+basic Petri nets. In this way it became possible to model different
+processes in a single subnet. PrT nets used arc expressions to define
+how transitions can occur in different ways (occurrence modes)
+depending on the colors of the involved input and output tokens. The
+invention of colored distinguishable tokens in PrT nets was a gigantic
+step forward -- but it still had some limitations. PrT nets only had
+one set of token colors, and all places have to use this set (or
+Cartesian products based on this set).
 
 The second step towards a more general class of Petri nets was taken
 by Jensen in his PhD thesis in 1980 \cite{jensen:81} with the
 introduction of the first kind of Colored Petri Nets (CPNs). This
 Petri net model allowed the modeler to use a number of different color
-sets This made it possible to represent data values in a more
+sets. This made it possible to represent data values in a more
 intuitive way instead of having to encode all data into a single
 shared set. It later turned out to be convenient to define the color
 sets by means of data types known from programming languages, such as
@@ -126,10 +129,10 @@ between data and system behavior. A third step forward was taken by
 Huber, Jensen, and Shapiro in 1990 with the introduction of
 Hierarchical CPNs \cite{huber:91}. Their work was heavily inspired by
 the hierarchy concepts in the Structured Analysis and Design Technique
-(SADT) developed by Marca and McGowan \cite{X}. It was Shapiro who got
+(SADT) developed by Marca and McGowan \cite{sadt}. It was Shapiro who got
 the idea to port the SADT hierarchy concepts to CPN.  The introduction
 of hierarchical CPNs allowed the modeler to structure a large CPN
-model into a number of interacting and re-usable modules - in a
+model into a number of interacting and re-usable modules -- in a
 similar way as known from programming languages. This implied that
 Petri net models of large systems become much more tractable, since
 they can be split into modules of a reasonable size and the model can

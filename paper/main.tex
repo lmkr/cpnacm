@@ -26,7 +26,8 @@
 %
 % For tracking purposes - this is V3.1SP - APRIL 2009
 
-\documentclass{acm_proc_article-sp}
+%\documentclass[nocopyrightspace]{acm_proc_article-sp}
+\documentclass[nocopyrightspace]{sig-alternate}
 
 
 \usepackage{graphics}
@@ -36,7 +37,8 @@
 \setpagenumber{1}
 %\title{The Coloured Petri Nets Modeling Languages for Concurrent Systems}
 
-\title{Coloured Petri Nets: A Graphical Language for Formal Modeling and Validation of Concurrent Systems\titlenote{The Coloured Petri Nets model presented in this paper is available via \texttt{http://X.Y.Z/cpncommitmodel} and CPN Tools is available for download via \texttt{www.cpntools.org}}}
+\title{Coloured Petri Nets: A Graphical Language for Formal Modeling and Validation of Concurrent Systems}
+
 %\subtitle{}
 
 %\titlenote{A full version of this paper is available as
@@ -112,11 +114,11 @@ language, and briefly surveys how quantitative and qualitative
 behavioral properties of CPN models can be validated using
 simulation-based performance analysis and explicit state space
 exploration. In addition, we give a brief overview of CPN Tools which
-provide tool support for the practical use of CPNs, and provide
-pointers to some significant examples where the CPN technology has
-been put into practical use in an industrial setting. As we proceed,
-we give a historical perspective on the research contributions that
-led to the development of the CPN technology.
+provide software tool support for the practical use of CPNs, and
+provide pointers to some significant examples where the CPN technology
+has been put into practical use in an industrial setting. As we
+proceed, we give a historical perspective on the research
+contributions that led to the development of the CPN technology.
 
 \end{abstract}
 
@@ -149,16 +151,18 @@ led to the development of the CPN technology.
 
 \input{conclusion}
 
-\paragraph{Acknowledgements}
-
-Jawahar Malhotra got the idea to use the Standard ML language as a
-basis for type definitions and net inscriptions in Design/CPN, Ole
-Bach Andersen implemented the graphical interface, and S\o{}ren
-Christensen implemented the complex inference algorithms for automatic
-binding of free variables during simulations. Hartmann Genrich
-constributed to the Design/CPNq with knowledge and experience from PrT
-nets. The graphical user interface of CPN Tools was designed together
-with Michel Beaudouin-Lafon and Wendy McKay.
+\paragraph*{Acknowledgements}  Several colleagues and researchers have contributed to the development
+of CPNs.  In addition to the scientific work already cited, the
+following persons significantly influenced the the development of
+supporting computer tool. Jawahar Malhotra got the idea to use the
+Standard ML language as a basis for type definitions and net
+inscriptions in Design/CPN, Ole Bach Andersen implemented the
+graphical interface of Design/CPN, and S\o{}ren Christensen
+implemented the complex inference algorithms for automatic binding of
+free variables during simulations. Hartmann Genrich constributed to
+the Design/CPN with knowledge and experience from PrT nets. The
+graphical user interface of CPN Tools was designed together with
+Michel Beaudouin-Lafon and Wendy McKay.
 
 \bibliographystyle{abbrv}
 \bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case

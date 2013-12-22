@@ -4,7 +4,7 @@
 % modules - substitution transitions
 
 To give an informal introduction to the concepts of CPNs, we use a CPN
-model of a distributed two-phase commit transaction system. The reader
+model of a distributed two-phase commit transaction system.\footnote{The CPN model presented in this paper is available via \texttt{http://X.Y.Z/cpncommitmodel}}.  The reader
 interested in the formal definition of CPNs is referred to
 \cite{newcpnbook}. The CPN model of the two-phase commit system is
 comprised of four \concept{modules} hierarchically organized into
@@ -40,24 +40,24 @@ places are called \concept{color sets}. Figure~\ref{fig:coloursets}
 lists the definitions of the color sets used for the four places in
 Fig.~\ref{fig:commit}. These color sets are defined using the CPN ML
 programming language which is based on the functional language
-Standard ML \cite{X}.
+Standard ML \cite{sml}.
 
 The \smlcode{Worker} color set is an indexed type consisting of the
-values \smlcode{wrk(1),wrk(2),...,wrk(W)} where the symbolic constant
-\smlcode{W} is used to specify the number of worker processes
-considered. This color set is used to model the identity of the worker
-processes. The color set \smlcode{Vote} is an enumeration type
-containing the values \smlcode{Yes} and \smlcode{No}, and is used to
-model that a worker may vote \smlcode{Yes} or \smlcode{No} to commit
-the transaction. The color set \smlcode{WorkerxVote} is a product type
-containing pairs consisting of a worker and its vote. The color set
-\smlcode{Decision} is an enumeration type used to model whether the
-coordinator decides to \smlcode{abort} or \smlcode{commit} the
-transaction (only if all workers vote yes will the transaction be
-committed). It should be noted that in addition to the type
-constructors introduced above, CPN ML supports union, lists, and
-record types. The variables \smlcode{w} and \smlcode{vote} declared in
-Fig.~\ref{fig:coloursets} will be introduced later.
+values \smlcode{wrk(1),wrk(2),...,wrk(W)} used to model the identity
+of the worker processes. The symbolic constant \smlcode{W} is used to
+specify the number of worker processes considered. The color set
+\smlcode{Vote} is an enumeration type containing the values
+\smlcode{Yes} and \smlcode{No}, and is used to model that a worker may
+vote \smlcode{Yes} or \smlcode{No} to commit the transaction. The
+color set \smlcode{WorkerxVote} is a product type containing pairs
+consisting of a worker and its vote. The color set \smlcode{Decision}
+is an enumeration type used to model whether the coordinator decides
+to \smlcode{abort} or \smlcode{commit} the transaction (only if all
+workers vote yes will the transaction be committed). It should be
+noted that in addition to the type constructors introduced above, CPN
+ML supports union, lists, and record types. The variables \smlcode{w}
+and \smlcode{vote} declared in Fig.~\ref{fig:coloursets} will be
+introduced later.
 
 \begin{figure}[]
 \begin{verbatim}
@@ -90,7 +90,7 @@ places in Fig.~\ref{fig:commit}, all places are empty in the initial
 marking. Initially, the \concept{current marking} of a CPN model
 equals the initial marking. When a CPN model is executed
 \concept{occurrences} of \concept{enabled transitions} consume and
-produce tokens on the places which will change the \concept{current
+produce tokens on the places changing the \concept{current
   marking} of the CPN model.
 
  
@@ -116,7 +116,7 @@ places.  The places \figitem{CanCommit} and \figitem{Decision} are
 \figitem{Coordinator} module will only produce tokens on these
 places. It is also possible for a place to be an \concept{input-output
   port place} which means that the module may both consume and produce
-tokens from (on) this place.
+tokens on this place.
 
 \begin{figure}[]
 \centering
@@ -144,21 +144,22 @@ marking of a place is omitted if currently the place contains no
 tokens.
 
 The transitions \figitem{SendCanCommit}, \figitem{CollectVotes}, and
-\figitem{ReceiveAcknowledgements} model the events/actions that cause
-the coordinator to change state. The coordinator will first send a can
-commit message (transition \figitem{SendCanCommit}) to each worker
-asking whether they can commit the transaction. Then the coordinator
-will collect the votes from all workers (substitution transition
-\figitem{CollectVotes}) and send a decision to the workers that voted
-yes indicating whether the transaction is to be committed or
-not. Finally, the coordinator will receive an acknowledgment from each
-worker that voted yes, confirming that they have received the decision
-(transition \figitem{ReceiveAcknowledgements}).  It should be noted
-that \figitem{CollectVotes} is a substitution transition which means
-that the details of how the coordinator collects votes is modeled by
-the associated \figitem{CollectVotes} submodule. This illustrates how
-use of ordinary and substitution transitions can be mixed within a
-module. We omit the details of \figitem{CollectVotes} in this paper.
+\figitem{Receive\linebreak[4]Acknowledgements} model the
+events/actions that cause the coordinator to change state. The
+coordinator will first send a can commit message (transition
+\figitem{SendCanCommit}) to each worker asking whether they can commit
+the transaction. Then the coordinator will collect the votes from all
+workers (substitution transition \figitem{CollectVotes}) and send a
+decision to the workers that voted yes indicating whether the
+transaction is to be committed or not. Finally, the coordinator will
+receive an acknowledgment from each worker that voted yes, confirming
+that they have received the decision (transition
+\figitem{ReceiveAcknowledgements}).  It should be noted that
+\figitem{CollectVotes} is a substitution transition which means that
+the details of how the coordinator collects votes is modeled by the
+associated \figitem{CollectVotes} submodule. This illustrates the
+mixed use of ordinary and substitution transitions within a module. We
+omit the details of \figitem{CollectVotes} in this paper.
 
 % basic enabling and occurrences
 
@@ -221,8 +222,8 @@ Fig.~\ref{fig:commit}. The places \figitem{CanCommit},
 \figitem{Votes}, \figitem{Decision}, and \figitem{Acknowledge}
 constitute the port places of this module and are linked to the
 accordingly named socket places in Fig.~\ref{fig:commit}. The places
-\figitem{Idle} and \figitem{WaitingDecision} model the two main
-states of worker processes. Each of these places have the color set
+\figitem{Idle} and \figitem{WaitingDecision} model the two main states
+of worker processes. Each of these places have the color set
 \smlcode{Worker} and the idea is that when there is a token with color
 \smlcode{wrk(i)} on, e.g., the place \figitem{Idle}, then this models
 that the i'th worker is in state idle. This makes it possible to model
@@ -231,7 +232,7 @@ without having to have a place for each worker or a module instance
 for each worker. Initially, all workers are in the idle state as
 represented by corresponding tokens on place \figitem{Idle} in the
 initial marking. The transition \figitem{ReceiveCanCommit} models the
-reception of can commit messages from the coordinator and the sending
+reception of can-commit messages from the coordinator and the sending
 of a vote. The transition \figitem{ReceiveDecision} models the
 reception of a decision message from the coordinator and the sending
 of an acknowledgment.
@@ -244,8 +245,8 @@ of an acknowledgment.
 \end{figure}
 
 The current marking of place \figitem{CanCommit} in
-Fig.~\ref{fig:worker} is \smlcode{1`wrk(1) ++ 1`wrk(2)} modelling a
-marking where the coordinator has sent a can commit message to each
+Fig.~\ref{fig:worker} is \smlcode{1`wrk(1) ++ 1`wrk(2)} modeling a
+marking where the coordinator has sent a can-commit message to each
 worker. The thick border of transition \figitem{ReceiveCanCommit}
 indicates that this transition is enabled in the current marking. The
 arc expressions on the surrounding arcs of the
@@ -261,16 +262,21 @@ the input and output arc expressions. This is done by creating a
 variables occurring in the arc expression of the transition. Bindings
 can be considered different modes in which a transition may occur.  As
 \smlcode{w} is of type \smlcode{Worker} and \smlcode{vote} is of type
-\smlcode{Decision}, this gives the following four possible bindings
-reflecting that each of the two workers may vote \smlcode{Yes} or
-\smlcode{No} to committing the transactions:
+\smlcode{Decision}, this gives the bindings listed in
+Fig.~\ref{fig:bindings} reflecting that each of the two workers may
+vote \smlcode{Yes} or \smlcode{No} to committing the transactions.
 
+\begin{figure}[]
+\centering
 \begin{eqnarray*}
 b_{1Y} & = & \langle \smlcode{w} = \smlcode{wrk(1)}, \smlcode{vote} = \smlcode{Yes} \rangle \\
 b_{1N} & = & \langle \smlcode{w} = \smlcode{wrk(1)}, \smlcode{vote} = \smlcode{No} \rangle \\
 b_{2Y} & = & \langle \smlcode{w} = \smlcode{wrk(2)}, \smlcode{vote} = \smlcode{Yes} \rangle \\
 b_{2N} & = & \langle \smlcode{w} = \smlcode{wrk(2)}, \smlcode{vote} = \smlcode{No} \rangle
 \end{eqnarray*}
+\caption{Bindings of transition \figitem{ReceiveCanCommit}.}
+\label{fig:bindings}
+\end{figure}
 
 A binding of a transition is enabled if evaluating each input arc
 expression in the binding results in a multi-set of tokens which is a
@@ -282,8 +288,9 @@ results in the multi-set containing a single token with the color
 on place \figitem{Idle} in the marking depicted in
 Fig.~\ref{fig:worker}. Similarly for the input arc expression on the
 arc from place \figitem{CanCommit}. This means that binding $b_{1Y}$
-is enabled and may occur. In fact, all four bindings listed above
-is enabled in the marking shown in Fig.~\ref{fig:worker}.
+is enabled and may occur. In fact, all four bindings listed in
+Fig.~\ref{fig:bindings} is enabled in the marking shown in
+Fig.~\ref{fig:worker}.
 
 % ocurrence and more complicated evaluation
 
@@ -292,7 +299,7 @@ enabled binding is determined by evaluating the output arc expressions
 of the transition in the given binding. Consider again the binding
 element $b_{1Y}$. The output arc expression \smlcode{(w,vote)}
 evaluates to \smlcode{(wrk(1),Yes)} and this token will be added to
-place \figitem{Votes} to inform the coordinator that worker 1 votes
+place \figitem{Votes} to inform the coordinator that worker one votes
 yes to committing the transaction. The arc expression on the arc from
 \figitem{ReceiveCanCommit} to \figitem{WaitingDecision} is an
 if-then-else expression which in the binding $b_{1Y}$ evaluates to the
@@ -313,14 +320,13 @@ the marking resulting from an occurrence of the $b_{1Y}$ binding.
 The occurrence of the binding $b_{1N}$ representing that worker one
 votes no would have the effect of removing a \smlcode{wrk(1)}-token
 from \figitem{Idle}, adding a \smlcode{(wrk(1),No)}-token to
-\figitem{Votes}, adding no tokens to place \figitem{WaitingDecision}
+\figitem{Votes}, adding no tokens to place \figitem{WaitingDecision},
 and adding a \smlcode{wrk(1)}-token to place \figitem{Idle}. This
 models the fact that if a worker votes no to committing the
 transaction, then it goes back to idle; whereas if it votes yes, then
 it will go to waiting to be informed about whether the transaction is
-to be committed or not.  Recall that this is a distributed system and
-hence a worker cannot (without exchanging messages) know what other
-workers have voted. 
+to be committed or not.  As this is a distributed system a worker
+cannot without exchanging messages know the vote of another worker.
 
 % concurrency
 All four bindings listed for transition \figitem{ReceiveCanCommit}
@@ -329,7 +335,7 @@ bindings may be \concept{concurrently enabled} if each binding can get
 its required multi-set of tokens from each input place independently
 of the other enabled bindings in the set. As an example, the two
 bindings $b_{1Y}$ and $b_{2Y}$ are concurrently enabled since each
-binding can gets its token from the input places without sharing with
+binding can get its token from the input places without sharing with
 each other. This reflects that the workers are executing concurrently
 and may simultaneously send a vote back to the coordinator. In
 contrast, the two bindings $b_{1Y}$ and $b_{1N}$ are not concurrently
@@ -341,7 +347,7 @@ extends to bindings of different transitions. A fundamental property
 of a set of concurrently enabled bindings that CPNs inherit from Petri
 nets is that these can be executed in any interleaved order and the
 resulting marking will be the same independently of the interleaved
-execution considered.
+execution considered.\\
 
 % a few comments about other constructed in the language
  Above relatively simple arc expressions were used. In general, arc
@@ -356,7 +362,7 @@ execution considered.
  in addition to the token colors. The time stamp of a token specifies
  the earliest model time at which the token can be removed by the
  occurrence of a transition, and delay inscriptions on the transitions
- and arcs are used to determined the timestamps on tokens produced by
+ and arcs are used to determine the timestamps on tokens produced by
  transitions. During model execution, the global model clock is always
  advanced to the earliest next time at which a transition becomes
  enabled, and the model stays at the current model time until no more
