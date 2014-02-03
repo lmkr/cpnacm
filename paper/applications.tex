@@ -10,9 +10,9 @@ containing more than hundred papers describing practical applications
 and domains is available \cite{cpnuse}.
 
 % Design/CPN and CPN Tools - history
-The first generation was the Design/CPN tool \cite{tacas97} created at
-Meta Software, Cambridge, Massachusetts, USA starting in 1988. The
-main architects behind the tool were Jensen, Shapiro and Huber
+The Design/CPN tool \cite{tacas97} was created at Meta Software,
+Cambridge, Massachusetts, USA starting in 1988. The main architects
+behind the tool were Jensen, Shapiro and Huber
 \cite{jensen:cpnmanual}, and the implementation was made together with
 an international group of people. The first version of Design/CPN
 supported modeling, syntax cheek and interactive simulation. The
@@ -24,12 +24,12 @@ in the introduction of this paper. A common platform for practical
 modeling had been established and this was used by most Petri net
 practitioners. The use of the platform was supported by a three volume
 monograph on Colored Petri Nets published by Jensen in 1992-1997
-\cite{jensen:cpnvols}. The CPN research group at Aarhus University was
-responsible for the development of the Design/CPN tool in the period
-1996-2002. Starting from year 2000 a second generation of tool
-support, called CPN Tools, was designed and implemented at Aarhus
-University, Denmark. The main architects behind the new tool were
-Jensen, Christensen, and Westergaard \cite{cpn2003}.  It was based on
+\cite{jensen:cpnvols}.  
+
+Starting from year 2000 a second generation of tool support, called
+CPN Tools, was designed and implemented at Aarhus University,
+Denmark. The main architects behind the new tool were Jensen,
+Christensen, and Westergaard \cite{cpn2003}.  It was based on
 empirical studies of the use of Design/CPN and much easier and
 efficient to use when constructing CPN models. In 2010 CPN Tools had
 10.000 licenses in 150 countries. At that time the development and
@@ -43,15 +43,15 @@ CPN Tools supports the editing and construction of CPN models,
 interactive and automatic simulation, state space-based model checking
 (see sidebar), and simulation-based performance analysis (see
 sidebar). CPN Tools is based on a much faster simulation engine
-compared to the one in Design/CPN developed by Haagh, Hansen, and
-Mortensen \cite{newsim}. With this simulation engine, models run more
-than a factor thousand times faster compared to Design/CPN allowing
-complex automatic simulations to be executed within seconds instead of
-hours. The suite of state space methods supported by CPN Tools has
-been developed by Christensen, Kristensen, Westergaard, Evangelista,
-and Mailund \cite{asap,sweep}. The support for simulation-based
-performance analysis developed is based on the work of Wells and
-Lindstr\o{}m \cite{performance1}.
+developed by Haagh, Hansen, and Mortensen \cite{newsim}. With this
+simulation engine, many models run more than thousand times faster
+compared to Design/CPN allowing complex automatic simulations to be
+executed within seconds instead of hours. The suite of state space
+methods supported by CPN Tools has been developed by Christensen,
+Kristensen, Westergaard, Evangelista, and Mailund
+\cite{asap,sweep}. The support for simulation-based performance
+analysis based on the work of Wells and Lindstr\o{}m
+\cite{performance1}.
 
 Figure~\ref{fig:cpntools} provides a screen-shot of CPN Tools with the
 CPN model considered in this paper. The user of CPN Tools works
@@ -72,17 +72,18 @@ contains two \concept{binders} (the rectangular windows) and a
 circular pop-up menu. Each binder may hold a number of items which can
 be accessed by clicking the tabs at the top of the binder (only one
 item is visible at a time). In the example shown, there are two
-binders. One binder (left) containing the \figitem{Commit} module and
-one binder (right) containing the \figitem{Coordinator} module. In
-addition, two tool palettes are shown: one (\figitem{Sim}) containing
-the tools that can be used for simulation of the model, and one tool
-palette (\figitem{Create}) containing the tools for creating CPN model
-elements. Items can be dragged from the index to the binders, and from
-one binder to another binder. A circular marking menu has been popped
-up on top of the right binder. Marking menus are contextual menus that
-make it possible to select among the operations possible on a given
-object. In the case of Fig.~\ref{fig:cpntools}, the marking menu gives
-the operations that can be performed on transition.
+binders (with one item each). One binder (left) containing the
+\figitem{Commit} module and one binder (right) containing the
+\figitem{Coordinator} module. In addition, two tool palettes are
+shown: one (\figitem{Sim}) containing the tools that can be used for
+simulation of the model, and one tool palette (\figitem{Create})
+containing the tools for creating CPN model elements. Items can be
+dragged from the index to the binders, and from one binder to another
+binder. A circular marking menu has been popped up on top of the right
+binder. Marking menus are contextual menus that make it possible to
+select among the operations possible on a given object. In the case of
+Fig.~\ref{fig:cpntools}, the marking menu gives the operations that
+can be performed on a transition.
 
 
 \begin{figure*}[t]
@@ -137,9 +138,22 @@ the user specifies the number of steps that are to be executed and/or
 sets a number of stop criteria and breakpoints. The simulator then
 automatically executes the model without user interaction by making
 random choices between the enabled events in the states
-encountered. Only the resulting state is shown in the GUI. CPN Tools
-also includes support for domain-specific graphical feedback from
-simulations developed by Westergaard and Lassen \cite{britney}.
+encountered. Only the resulting state is shown in the GUI but
+information about the executed steps can be collected in various
+ways. CPN Tools also includes support for domain-specific graphical
+feedback from simulations developed by Westergaard and Lassen
+\cite{britney}.
+
+In addition to the scientific work already cited, the following
+persons significantly influenced the development of the computer
+tools. Jawahar Malhotra got the idea to use the Standard ML language
+as a basis for type definitions and net inscriptions in Design/CPN,
+Ole Bach Andersen implemented the graphical interface of Design/CPN,
+and S\o{}ren Christensen implemented the complex inference algorithms
+for automatic binding of free variables during simulations. Hartmann
+Genrich constributed to Design/CPN with knowledge and experience from
+PrT nets. The graphical user interface of CPN Tools was designed
+together with Michel Beaudouin-Lafon and Wendy McKay.
 
 \ignore{
   The

@@ -4,7 +4,7 @@
 % modules - substitution transitions
 
 To give an informal introduction to the concepts of CPNs, we use a CPN
-model of a distributed two-phase commit transaction system.\footnote{The CPN model presented in this paper is available via \texttt{http://X.Y.Z/cpncommitmodel}}.  The reader
+model of a distributed two-phase commit transaction system.\footnote{The full details of the CPN model presented in this paper are available via \texttt{http://X.Y.Z/cpncommitmodel}}.  The reader
 interested in the formal definition of CPNs is referred to
 \cite{newcpnbook}. The CPN model of the two-phase commit system is
 comprised of four \concept{modules} hierarchically organized into
@@ -13,7 +13,7 @@ consists of two \concept{substitution transitions} (drawn as
 rectangles with double-lined borders) representing the
 \figitem{Coordinator} and the \figitem{Workers} in the system. Each of
 the substitution transitions has an associated \concept{submodule}
-that model the detailed behavior of the coordinator and the workers,
+that models the detailed behavior of the coordinator and the workers,
 respectively. The name of the submodule is written in the rectangular
 tag positioned at the bottom of each substitution transition.
 
@@ -30,7 +30,7 @@ The two substitution transitions are connected via directed
 \concept{arcs} to the four places \figitem{CanCommit},
 \figitem{Votes}, \figitem{Decision}, and \figitem{Acknowledge} (drawn
 as ellipses). Places connected to substitution transitions are called
-\concept{socket places} and are linked to \concept{port} places on the
+\concept{socket places} and are linked to \concept{port} places in the
 associated submodules (to be presented shortly). The coordinator and
 the workers interact by producing and consuming \concept{tokens} on
 the places. These tokens carry data values and the type of tokens that
@@ -42,22 +42,22 @@ Fig.~\ref{fig:commit}. These color sets are defined using the CPN ML
 programming language which is based on the functional language
 Standard ML \cite{sml}.
 
-The \smlcode{Worker} color set is an indexed type consisting of the
-values \smlcode{wrk(1),wrk(2),...,wrk(W)} used to model the identity
-of the worker processes. The symbolic constant \smlcode{W} is used to
-specify the number of worker processes considered. The color set
-\smlcode{Vote} is an enumeration type containing the values
-\smlcode{Yes} and \smlcode{No}, and is used to model that a worker may
-vote \smlcode{Yes} or \smlcode{No} to commit the transaction. The
-color set \smlcode{WorkerxVote} is a product type containing pairs
-consisting of a worker and its vote. The color set \smlcode{Decision}
-is an enumeration type used to model whether the coordinator decides
-to \smlcode{abort} or \smlcode{commit} the transaction (only if all
-workers vote yes will the transaction be committed). It should be
-noted that in addition to the type constructors introduced above, CPN
-ML supports union, lists, and record types. The variables \smlcode{w}
-and \smlcode{vote} declared in Fig.~\ref{fig:coloursets} will be
-introduced later.
+The symbolic constant \smlcode{W} is used to specify the number of
+worker processes considered. The \smlcode{Worker} color set is an
+indexed type consisting of the values
+\smlcode{wrk(1),wrk(2) .. wrk(W)} used to model the identity of the
+worker processes. The color set \smlcode{Vote} is an enumeration type
+containing the values \smlcode{Yes} and \smlcode{No}, and is used to
+model that a worker may vote \smlcode{Yes} or \smlcode{No} to commit
+the transaction. The color set \smlcode{WorkerxVote} is a product type
+containing pairs consisting of a worker and its vote. The color set
+\smlcode{Decision} is an enumeration type used to model whether the
+coordinator decides to \smlcode{abort} or \smlcode{commit} the
+transaction (only if all workers vote yes will the transaction be
+committed). It should be noted that in addition to the type
+constructors introduced above, CPN ML supports union, lists, and
+record types. The variables \smlcode{w} and \smlcode{vote} declared in
+Fig.~\ref{fig:coloursets} will be introduced later.
 
 \begin{figure}[]
 \begin{verbatim}
@@ -67,7 +67,7 @@ colset Worker = index wrk with  1..W;
 colset Vote = with Yes | No;
 colset WorkerxVote = product Worker * Vote;
 
-colset Decision = with abort | commit;
+colset Decision = with Abort | Commit;
 colset WorkerxDecision = product Worker * Decision;
 
 var w : Worker;
@@ -103,7 +103,7 @@ Fig.~\ref{fig:commit}. The places \figitem{CanCommit},
 \figitem{Votes}, \figitem{Decision}, and \figitem{Acknowledge} are
 \concept{port places} as indicated by the rectangular \figitem{In} and
 \figitem{Out} tags positioned next to them. These places are linked to
-the accordingly named places in the top-level module
+the accordingly named socket places in the top-level module
 (Fig.~\ref{fig:commit}) via a \concept{port-socket association} which
 implies that any tokens added (removed) from a port place by
 transitions in the \figitem{Coordinator} module will also be added
@@ -149,9 +149,9 @@ events/actions that cause the coordinator to change state. The
 coordinator will first send a can commit message (transition
 \figitem{SendCanCommit}) to each worker asking whether they can commit
 the transaction. Then the coordinator will collect the votes from all
-workers (substitution transition \figitem{CollectVotes}) and send a
-decision to the workers that voted yes indicating whether the
-transaction is to be committed or not. Finally, the coordinator will
+workers and send a decision to the workers that voted yes indicating
+whether the transaction is to be committed or not (substitution
+transition \figitem{CollectVotes}). Finally, the coordinator will
 receive an acknowledgment from each worker that voted yes, confirming
 that they have received the decision (transition
 \figitem{ReceiveAcknowledgements}).  It should be noted that
@@ -216,14 +216,14 @@ the votes from the worker processes.
 
 % worker process - and binding and binding elements.
 
-Figure~\ref{fig:worker} shows the \figitem{Worker} module which is the
-submodule of the \figitem{Workers} substitution transition in
+Figure~\ref{fig:worker} shows the \figitem{Workers} module which is
+the submodule of the \figitem{Workers} substitution transition in
 Fig.~\ref{fig:commit}. The places \figitem{CanCommit},
 \figitem{Votes}, \figitem{Decision}, and \figitem{Acknowledge}
 constitute the port places of this module and are linked to the
 accordingly named socket places in Fig.~\ref{fig:commit}. The places
-\figitem{Idle} and \figitem{WaitingDecision} model the two main states
-of worker processes. Each of these places have the color set
+\figitem{Idle} and \figitem{WaitingDecision} model the two states of
+worker processes. Each of these places have the color set
 \smlcode{Worker} and the idea is that when there is a token with color
 \smlcode{wrk(i)} on, e.g., the place \figitem{Idle}, then this models
 that the i'th worker is in state idle. This makes it possible to model
@@ -240,7 +240,7 @@ of an acknowledgment.
 \begin{figure}[]
 \centering
 \includegraphics[scale=.45]{figures/Workers.eps}
-\caption{The \figitem{Worker} module.}
+\caption{The \figitem{Workers} module.}
 \label{fig:worker}
 \end{figure}
 
@@ -323,10 +323,10 @@ from \figitem{Idle}, adding a \smlcode{(wrk(1),No)}-token to
 \figitem{Votes}, adding no tokens to place \figitem{WaitingDecision},
 and adding a \smlcode{wrk(1)}-token to place \figitem{Idle}. This
 models the fact that if a worker votes no to committing the
-transaction, then it goes back to idle; whereas if it votes yes, then
-it will go to waiting to be informed about whether the transaction is
-to be committed or not.  As this is a distributed system a worker
-cannot without exchanging messages know the vote of another worker.
+transaction, then it goes back to \figitem{Idle}; whereas if it votes
+yes, then it will go to \figitem{WaitingDecision}.  As this is a
+distributed system a worker cannot without exchanging messages know
+the vote of another worker.
 
 % concurrency
 All four bindings listed for transition \figitem{ReceiveCanCommit}
@@ -342,9 +342,9 @@ contrast, the two bindings $b_{1Y}$ and $b_{1N}$ are not concurrently
 enabled. These two bindings are in \concept{conflict} because they
 each need the single \smlcode{wrk(1)}-token on \figitem{Idle} (and in
 fact also the single \smlcode{wrk(1)}-token on place
-\figitem{CanCommit}). The notion of concurrency and conflict of binding
+\figitem{CanCommit}). The notion of concurrency and conflicts of binding
 extends to bindings of different transitions. A fundamental property
-of a set of concurrently enabled bindings that CPNs inherit from Petri
+of a set of concurrently enabled bindings that CPNs inherits from Petri
 nets is that these can be executed in any interleaved order and the
 resulting marking will be the same independently of the interleaved
 execution considered.\\
@@ -354,20 +354,20 @@ execution considered.\\
  expressions can be any expression that can be written in Standard ML
  as long as they have types that matches the corresponding places. In
  particular, arc expressions may apply functions including
- higher-order functions. CPNs also includes a notion of time inspired
+ higher-order functions. CPNs also include a notion of time inspired
  by the work of van der Aalst \cite{X} that makes it possible to model
  the time taken by different activities. It is based on the
- introduction of a \concept{global model clock} that represents the
- current model time and on attaching \concept{time stamps} to tokens
- in addition to the token colors. The time stamp of a token specifies
- the earliest model time at which the token can be removed by the
+ introduction of a \concept{global clock} that represents the current
+ model time and on attaching \concept{time stamps} to tokens in
+ addition to the token colors. The time stamp of a token specifies the
+ earliest model time at which the token can be removed by the
  occurrence of a transition, and delay inscriptions on the transitions
  and arcs are used to determine the timestamps on tokens produced by
  transitions. During model execution, the global model clock is always
  advanced to the earliest next time at which a transition becomes
  enabled, and the model stays at the current model time until no more
  transitions are enabled. The time concept provides the foundation for
- conducting simulation-based performance analysis of CPN models. 
+ conducting simulation-based performance analysis of CPN models.
 
 %i(see
 % sidebar on Performance Analysis).

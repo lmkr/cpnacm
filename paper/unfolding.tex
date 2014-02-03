@@ -1,9 +1,9 @@
 \section{Unfolding and Folding}
 
 % unfolding and folding
-The extensions of Petri nets that CPNs bring in the form of data
+The extensions of Petri nets that CPNs brings in the form of data
 types, a programming language, and modules add practical modeling
-power to Petri nets by making it possible to create models of complex
+power to Petri nets making it possible to create models of complex
 real systems. The extensions do not add expressive power from a
 theoretical perspective as any hierarchical CPN model can be
 \concept{unfolded} to a non-hierarchical CPN model which in turn can
@@ -13,9 +13,10 @@ into a CPN model with a single module consisting of a single place and
 a single transition. In practice such a folding is not interesting,
 because the arc expressions will be extremely complex and
 non-interpretable for a human being. However, the fact that the
-unfolding and folding exists shows that hierarchical CPNs (as do Petri
-nets) constitute a solid model for concurrency, conflict,
-synchronization and resource sharing.
+unfolding and folding exist shows that hierarchical CPNs have the same
+behavioral properties as basic Petri nets, and hence constitutes a
+solid model for concurrency, conflict, synchronization and resource
+sharing.
 
 %Anything which can be programming in Java can (in theory) also be
 %programmed in assembler code. It is just much more time-consuming and
@@ -36,14 +37,12 @@ color in the color set of the CPN place, and unfolding each CPN
 transition to a PTN transition for each possible binding of the CPN
 transition.  To illustrate the unfolding consider the subnet shown in
 Fig.~\ref{fig:sendcancommit}. To represent this CPN subnet as a PTN
-subnet, the CPN place \figitem{CanCommit} needs to be unfolded to PTN
-places corresponding to \smlcode{wrk(1)} and \smlcode{wrk(2)}. The
+subnet, the CPN place \figitem{CanCommit} needs to be unfolded to two
+PTN places corresponding to \smlcode{wrk(1)} and \smlcode{wrk(2)}. The
 place \figitem{Idle} and \figitem{WaitingVotes} does not need to be
 unfolded as the \smlcode{Unit} color set contains just a single
-value. Similarly, no unfolding of the \figitem{SendCanCommit}
-transition is required in this case since the transition does not have
-any variables. The equivalent PTN is shown in
-Fig,~\ref{fig:sendcancommitunfold}. It can be seen that the arc
+value. The equivalent PTN is shown in
+Fig.~\ref{fig:sendcancommitunfold}. It can be seen that the arc
 expressions are replaced by arc weights, and that the initial marking
 is replaced by the specification of a single token initially in
 \figitem{Idle}. To show the unfolding of a CPN transition consider the
@@ -56,6 +55,9 @@ Fig.~\ref{fig:bindings}. Figure~\ref{fig:receivecancommitunfold} shows
 the equivalent PTN for worker one. The equivalent PTN subnet has an
 identical subnet (modulo renaming) also for worker two.
 
+% Similarly, no unfolding of the \figitem{SendCanCommit}
+%transition is required in this case since the transition does not have
+%any variables. 
 
 % illustrate transition unfolding
 
@@ -77,6 +79,26 @@ identical subnet (modulo renaming) also for worker two.
 % It can be seen that we essentially
 %need a copy of the CPN fragment for each worker in the system.
 
+Above we have shown how to unfold two CPN subnets into PTN subnets.
+For larger color sets the unfolding yields an explosion in size, since
+we have at PTN place for each color of a CPN place and a PTN
+transition for each binding of a CPN transition. For our CPN model we
+just need to change the symbolic constant \smlcode{W}
+(cf.~\ref{fig:coloursets}) to configure the model to handle, e.g.,
+five workers. With basic Petri nets we need to add places,
+transitions, and arcs and hence change the net structure. This shows
+that CPNs (in contrast to basic Petri nets) provides a means for
+easily creating parameterizable models and also enable more compact
+modeling (as we only need a single instance of the \figitem{CanCommit}
+place in order to accommodate any number of workers). With CPN it is
+possible to have many color sets and hence we can use one color set
+for the coordinator, a second for the workers, a third for Yes/No
+votes and a fourth for Abort/Commit decisions. With PrT nets only a
+single set of token colors is allowed (or Cartesian products thereof)
+and hence we need to encode the identity of workers, Yes/No votes and
+Abort/Commit decisions into this single set of token colors.
+
+\ignore{
 The unfolding above demonstrates that Petri nets in their basic form
 do not provide a way to easily scale the model according to some
 system parameter (in this case the number of workers). It is necessary
@@ -104,3 +126,4 @@ PrT nets only one set of token colors are allowed (or Cartesian
 product thereof) and hence with PrT nets we could have had to
 represent the identity workers, yes/No votes and abort/commit
 decisions by colors based on this single set of token colors.
+}
