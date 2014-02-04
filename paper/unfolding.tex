@@ -38,7 +38,7 @@ sharing.
 \begin{figure*}[t!!!!!]
 \centering
 \includegraphics[scale=.43]{figures/PTReceiveCanCommitBoth.eps}
-\caption{PTN representation corresponding of the CPN in Fig.~\ref{fig:receivecancommit}.}
+\caption{PTN representation of the CPN in Fig.~\ref{fig:receivecancommit}.}
 \label{fig:receivecancommitunfold}
 \end{figure*}
 
@@ -82,10 +82,10 @@ the equivalent PTN (arc weights have been omittted as all are 1).
 
 Above we have shown how to unfold two CPN subnets into PTN subnets.
 For larger color sets the unfolding yields an explosion in size, since
-we have at PTN place for each color of a CPN place and a PTN
+we have a PTN place for each color of a CPN place and a PTN
 transition for each binding of a CPN transition. For our CPN model we
 just need to change the symbolic constant \smlcode{W}
-(cf.~\ref{fig:coloursets}) to configure the model to handle, e.g.,
+(cf. Fig.~\ref{fig:coloursets}) to configure the model to handle, e.g.,
 five workers. With basic Petri nets we need to add places,
 transitions, and arcs and hence change the net structure. This shows
 that CPNs (in contrast to basic Petri nets) provides a means for
@@ -93,11 +93,11 @@ easily creating parameterizable models and also enable more compact
 modeling (as we only need a single instance of the \figitem{CanCommit}
 place in order to accommodate any number of workers). With CPN it is
 possible to have many color sets and hence we can use one color set
-for the coordinator, a second for the workers, a third for Yes/No
-votes and a fourth for Abort/Commit decisions. With PrT nets only a
+for the coordinator, a second for the workers, a third for yes/no
+votes and a fourth for abort/commit decisions. With PrT nets only a
 single set of token colors is allowed (or Cartesian products thereof)
-and hence we need to encode the identity of workers, Yes/No votes and
-Abort/Commit decisions into this single set of token colors.
+and hence we need to encode the identity of workers, yes/no votes and
+abort/commit decisions into this single set of token colors.
 
 \ignore{
 The unfolding above demonstrates that Petri nets in their basic form

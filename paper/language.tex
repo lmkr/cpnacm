@@ -52,7 +52,7 @@ model that a worker may vote \smlcode{Yes} or \smlcode{No} to commit
 the transaction. The color set \smlcode{WorkerxVote} is a product type
 containing pairs consisting of a worker and its vote. The color set
 \smlcode{Decision} is an enumeration type used to model whether the
-coordinator decides to \smlcode{abort} or \smlcode{commit} the
+coordinator decides to \smlcode{Abort} or \smlcode{Commit} the
 transaction (only if all workers vote yes will the transaction be
 committed). It should be noted that in addition to the type
 constructors introduced above, CPN ML supports union, lists, and
@@ -90,8 +90,7 @@ places in Fig.~\ref{fig:commit}, all places are empty in the initial
 marking. Initially, the \concept{current marking} of a CPN model
 equals the initial marking. When a CPN model is executed
 \concept{occurrences} of \concept{enabled transitions} consume and
-produce tokens on the places changing the \concept{current
-  marking} of the CPN model.
+produce tokens on the places changing the current marking of the CPN model.
 
  
 % coordinator  - port places
@@ -128,7 +127,7 @@ tokens on this place.
 
 
 The places \figitem{Idle}, \figitem{WaitingVotes}, and
-\figitem{WaitingAcknowledgement} are used to model the states of the
+\figitem{WaitingAcknowledgements} are used to model the states of the
 coordinator when executing the two-phase commit protocol. The places
 \figitem{Idle} and \figitem{WaitingVotes} have the color set
 \smlcode{UNIT} containing just a single value \smlcode{()} (denoted
@@ -259,7 +258,7 @@ enabling and occurrence of transition \figitem{ReceiveCanCommit}, we
 need to bind (assign) values to these variables in order to evaluate
 the input and output arc expressions. This is done by creating a
 \concept{binding} which associates a value to each of the free
-variables occurring in the arc expression of the transition. Bindings
+variables occurring in the arc expressions of the transition. Bindings
 can be considered different modes in which a transition may occur.  As
 \smlcode{w} is of type \smlcode{Worker} and \smlcode{vote} is of type
 \smlcode{Decision}, this gives the bindings listed in
