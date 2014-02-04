@@ -28,6 +28,21 @@ sharing.
 
 % illustrate place and transition unfolding
 
+\begin{figure}[b]
+\centering
+\includegraphics[scale=.45]{figures/PTSendCanCommit.eps}
+\caption{PTN representation of the CPN in Fig.~\ref{fig:sendcancommit}.}
+\label{fig:sendcancommitunfold}
+\end{figure}
+
+\begin{figure*}[t!!!!!]
+\centering
+\includegraphics[scale=.45]{figures/PTReceiveCanCommitBoth.eps}
+\caption{PTN representation corresponding of the CPN in Fig.~\ref{fig:receivecancommit}.}
+\label{fig:receivecancommitunfold}
+\end{figure*}
+
+
 The unfolding of a hierarchical CPN to a non-hierarchical CPN consists
 of recursively replacing each substitution transition with its
 associated submodule such that related port and socket places are
@@ -45,36 +60,24 @@ value. The equivalent PTN is shown in
 Fig.~\ref{fig:sendcancommitunfold}. It can be seen that the arc
 expressions are replaced by arc weights, and that the initial marking
 is replaced by the specification of a single token initially in
-\figitem{Idle}. To show the unfolding of a CPN transition consider the
+\figitem{Idle}. 
+
+
+To show the unfolding of a CPN transition consider the
 CPN subnet shown in Fig.~\ref{fig:receivecancommit}. To represent this
 subnet as a PTN subnet, we need to unfold the places as explained in
 the previous paragraph and in addition unfold the transition
 \figitem{ReceiveCanCommit} to a PTN transition for each of the four
 binding elements listed in
 Fig.~\ref{fig:bindings}. Figure~\ref{fig:receivecancommitunfold} shows
-the equivalent PTN for worker one. The equivalent PTN subnet has an
-identical subnet (modulo renaming) also for worker two.
+the equivalent PTN where we have omittted arc weights as they are all
+one.
 
 % Similarly, no unfolding of the \figitem{SendCanCommit}
 %transition is required in this case since the transition does not have
 %any variables. 
 
 % illustrate transition unfolding
-
-\begin{figure}[b]
-\centering
-\includegraphics[scale=.45]{figures/PTSendCanCommit.eps}
-\caption{PTN representation of the CPN in Fig.~\ref{fig:sendcancommit}.}
-\label{fig:sendcancommitunfold}
-\end{figure}
-
-
-\begin{figure}[t]
-\centering
-\includegraphics[scale=.45]{figures/PTReceiveCanCommit.eps}
-\caption{PTN representation corresponding to worker one for the CPN in Fig.~\ref{fig:receivecancommit}.}
-\label{fig:receivecancommitunfold}
-\end{figure}
 
 % It can be seen that we essentially
 %need a copy of the CPN fragment for each worker in the system.

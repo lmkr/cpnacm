@@ -4,7 +4,7 @@
 % modules - substitution transitions
 
 To give an informal introduction to the concepts of CPNs, we use a CPN
-model of a distributed two-phase commit transaction system.\footnote{The full details of the CPN model presented in this paper are available via \texttt{http://X.Y.Z/cpncommitmodel}}.  The reader
+model of a distributed two-phase commit transaction system.\footnote{The full details of the CPN model presented in this paper are available via \texttt{http://goo.gl/HY4ZNQ}}.  The reader
 interested in the formal definition of CPNs is referred to
 \cite{newcpnbook}. The CPN model of the two-phase commit system is
 comprised of four \concept{modules} hierarchically organized into
@@ -354,20 +354,23 @@ execution considered.\\
  expressions can be any expression that can be written in Standard ML
  as long as they have types that matches the corresponding places. In
  particular, arc expressions may apply functions including
- higher-order functions. CPNs also include a notion of time inspired
- by the work of van der Aalst \cite{X} that makes it possible to model
- the time taken by different activities. It is based on the
- introduction of a \concept{global clock} that represents the current
- model time and on attaching \concept{time stamps} to tokens in
- addition to the token colors. The time stamp of a token specifies the
- earliest model time at which the token can be removed by the
- occurrence of a transition, and delay inscriptions on the transitions
- and arcs are used to determine the timestamps on tokens produced by
- transitions. During model execution, the global model clock is always
- advanced to the earliest next time at which a transition becomes
- enabled, and the model stays at the current model time until no more
- transitions are enabled. The time concept provides the foundation for
- conducting simulation-based performance analysis of CPN models.
+ higher-order functions. In addition, it is also possible to associate
+ \concept{guards} to transitions which are boolean expressions
+ specifying additional constraints on the enabling of transition. CPNs
+ also include a notion of time inspired by the work of van der Aalst
+ \cite{aalst:93} that makes it possible to model the time taken by
+ different activities. It is based on the introduction of a
+ \concept{global clock} that represents the current model time and on
+ attaching \concept{time stamps} to tokens in addition to the token
+ colors. The time stamp of a token specifies the earliest model time
+ at which the token can be removed by the occurrence of a transition,
+ and delay inscriptions on the transitions and arcs are used to
+ determine the timestamps on tokens produced by transitions. During
+ model execution, the global model clock is always advanced to the
+ earliest next time at which a transition becomes enabled, and the
+ model stays at the current model time until no more transitions are
+ enabled. The time concept provides the foundation for conducting
+ simulation-based performance analysis of CPN models.
 
 %i(see
 % sidebar on Performance Analysis).
