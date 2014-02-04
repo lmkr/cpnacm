@@ -37,7 +37,7 @@ sharing.
 
 \begin{figure*}[t!!!!!]
 \centering
-\includegraphics[scale=.45]{figures/PTReceiveCanCommitBoth.eps}
+\includegraphics[scale=.43]{figures/PTReceiveCanCommitBoth.eps}
 \caption{PTN representation corresponding of the CPN in Fig.~\ref{fig:receivecancommit}.}
 \label{fig:receivecancommitunfold}
 \end{figure*}
@@ -50,28 +50,26 @@ merged into a single place. The unfolding of a non-hierarchical CPN to
 a PTN consists of unfolding each CPN place to a PTN place for each
 color in the color set of the CPN place, and unfolding each CPN
 transition to a PTN transition for each possible binding of the CPN
-transition.  To illustrate the unfolding consider the subnet shown in
-Fig.~\ref{fig:sendcancommit}. To represent this CPN subnet as a PTN
-subnet, the CPN place \figitem{CanCommit} needs to be unfolded to two
-PTN places corresponding to \smlcode{wrk(1)} and \smlcode{wrk(2)}. The
-place \figitem{Idle} and \figitem{WaitingVotes} does not need to be
-unfolded as the \smlcode{Unit} color set contains just a single
+transition.  To illustrate the unfolding consider the subnet in
+Fig.~\ref{fig:sendcancommit}. To represent this CPN subnet as a PTN,
+the CPN place \figitem{CanCommit} needs to be unfolded to two PTN
+places corresponding to \smlcode{wrk(1)} and \smlcode{wrk(2)}. The
+places \figitem{Idle} and \figitem{WaitingVotes} do not need to be
+unfolded as the \smlcode{Unit} color set contains only a single
 value. The equivalent PTN is shown in
 Fig.~\ref{fig:sendcancommitunfold}. It can be seen that the arc
 expressions are replaced by arc weights, and that the initial marking
 is replaced by the specification of a single token initially in
-\figitem{Idle}. 
+\figitem{Idle}.
 
-
-To show the unfolding of a CPN transition consider the
-CPN subnet shown in Fig.~\ref{fig:receivecancommit}. To represent this
-subnet as a PTN subnet, we need to unfold the places as explained in
-the previous paragraph and in addition unfold the transition
+To show the unfolding of a CPN transition consider the CPN subnet
+shown in Fig.~\ref{fig:receivecancommit}. To represent this subnet as
+a PTN, we need to unfold the places as explained in the previous
+paragraph and in addition unfold the transition
 \figitem{ReceiveCanCommit} to a PTN transition for each of the four
 binding elements listed in
 Fig.~\ref{fig:bindings}. Figure~\ref{fig:receivecancommitunfold} shows
-the equivalent PTN where we have omittted arc weights as they are all
-one.
+the equivalent PTN (arc weights have been omittted as all are 1).
 
 % Similarly, no unfolding of the \figitem{SendCanCommit}
 %transition is required in this case since the transition does not have

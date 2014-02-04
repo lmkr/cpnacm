@@ -27,30 +27,29 @@ monograph on Colored Petri Nets published by Jensen in 1992-1997
 \cite{jensen:cpnvols}.  
 
 Starting from year 2000 a second generation of tool support, called
-CPN Tools, was designed and implemented at Aarhus University,
-Denmark. The main architects behind the new tool were Jensen,
-Christensen, and Westergaard \cite{cpn2003}.  It was based on
-empirical studies of the use of Design/CPN and much easier and
-efficient to use when constructing CPN models. In 2010 CPN Tools had
-10.000 licenses in 150 countries. At that time the development and
-maintenance of the tool set were transferred to the group of van der
-Aalst at the Technical University of Eindhoven, The Netherlands
-\cite{cpntoolsweb}. New updates with improved functionality are made
-at a regular basis.
+CPN Tools, was designed and implemented at Aarhus University. The main
+architects behind the new tool were Jensen, Christensen, and
+Westergaard \cite{cpn2003}.  It was based on empirical studies of the
+use of Design/CPN and much easier and efficient to use when
+constructing CPN models. In 2010 CPN Tools had 10.000 licenses in 150
+countries. At that time the development and maintenance of the tool
+set were transferred to the group of van der Aalst at the Technical
+University of Eindhoven \cite{cpntoolsweb}. New updates with improved
+functionality are made at a regular basis.
 
 % Illustration of CPN Tools.
 CPN Tools supports the editing and construction of CPN models,
 interactive and automatic simulation, state space-based model checking
 (see sidebar), and simulation-based performance analysis (see
 sidebar). CPN Tools is based on a much faster simulation engine
-developed by Haagh, Hansen, and Mortensen \cite{mortensen:01}. With this
-simulation engine, many models run more than thousand times faster
-compared to Design/CPN allowing complex automatic simulations to be
-executed within seconds instead of hours. The suite of state space
+developed by Haagh, Hansen, and Mortensen \cite{mortensen:01}. With
+this simulation engine, many models run more than thousand times
+faster compared to Design/CPN allowing complex automatic simulations
+to be executed within seconds instead of hours. The state space
 methods supported by CPN Tools has been developed by Christensen,
 Kristensen, Westergaard, Evangelista, and Mailund
-\cite{asap,sweep}. The support for simulation-based performance
-analysis based on the work of Wells and Lindstr\o{}m
+\cite{sweep,asap}. The support for performance
+analysis is based on the work of Wells and Lindstr\o{}m
 \cite{performance1}.
 
 \begin{figure*}[t]
@@ -122,28 +121,27 @@ different tool palettes to \figitem{Create} elements, change their
 
 % syntax check and code generation and simulation
 
-CPN Tools performs syntax and type checking, and error messages are
-provided to the user in a contextual manner next to the object causing
-the error. The syntax check and code generation are incremental and
-are performed in parallel with editing. This means that it is possible
-to execute parts of a CPN model even if the model is not complete, and
-that when parts of a CPN model are modified, a syntax check and code
-generation are performed only on the elements that depend on the parts
-that were modified. CPN Tools supports two types of simulation:
-interactive and automatic. In an interactive simulation, the user is
-in complete control and determines the individual steps in the
-simulation, by selecting between the enabled events in the current
-state. CPN Tools shows the effect of executing a selected step in the
-graphical representation of the CPN model. In an automatic simulation
-the user specifies the number of steps that are to be executed and/or
-sets a number of stop criteria and breakpoints. The simulator then
-automatically executes the model without user interaction by making
-random choices between the enabled events in the states
-encountered. Only the resulting state is shown in the GUI but
-information about the executed steps can be collected in various
-ways. CPN Tools also includes support for domain-specific graphical
-feedback from simulations developed by Westergaard and Lassen
-\cite{britney}.
+CPN Tools performs syntax and type checking, and contextual error
+messages are provided to the user. The syntax check and code generation are
+incremental and are performed in parallel with editing. This means
+that it is possible to execute parts of a CPN model even if the model
+is not complete, and that when parts of a CPN model are modified, a
+syntax check and code generation are performed only on the elements
+that depend on the parts that were modified. CPN Tools supports two
+types of simulation: interactive and automatic. In an interactive
+simulation, the user is in complete control and determines the
+individual steps in the simulation, by selecting between the enabled
+events in the current state. CPN Tools shows the effect of executing a
+selected step in the graphical representation of the CPN model. In an
+automatic simulation the user specifies the number of steps that are
+to be executed and/or sets a number of stop criteria and
+breakpoints. The simulator then automatically executes the model
+without user interaction by making random choices between the enabled
+events in the states encountered. Only the resulting state is shown in
+the GUI but information about the executed steps can be collected in
+various ways. CPN Tools also includes support for domain-specific
+graphical feedback from simulations developed by Westergaard and
+Lassen \cite{britney}.
 
 In addition to the scientific work already cited, the following
 persons significantly influenced the development of the computer
