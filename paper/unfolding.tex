@@ -3,7 +3,7 @@
 % unfolding and folding
 The extensions of Petri nets that CPNs brings in the form of data
 types, a programming language, and modules add practical modeling
-power to Petri nets making it possible to create models of complex
+power to Petri nets making it feasible to create models of complex
 real systems. The extensions do not add expressive power from a
 theoretical perspective as any hierarchical CPN model can be
 \concept{unfolded} to a non-hierarchical CPN model which in turn can
@@ -45,7 +45,7 @@ sharing.
 
 The unfolding of a hierarchical CPN to a non-hierarchical CPN consists
 of recursively replacing each substitution transition with its
-associated submodule such that related port and socket places are
+associated submodule such that associated port and socket places are
 merged into a single place. The unfolding of a non-hierarchical CPN to
 a PTN consists of unfolding each CPN place to a PTN place for each
 color in the color set of the CPN place, and unfolding each CPN
@@ -59,8 +59,7 @@ unfolded as the \smlcode{Unit} color set contains only a single
 value. The equivalent PTN is shown in
 Fig.~\ref{fig:sendcancommitunfold}. It can be seen that the arc
 expressions are replaced by arc weights, and that the initial marking
-is replaced by the specification of a single token initially in
-\figitem{Idle}.
+is replaced by a single token initially in \figitem{Idle}.
 
 To show the unfolding of a CPN transition consider the CPN subnet
 shown in Fig.~\ref{fig:receivecancommit}. To represent this subnet as
@@ -82,22 +81,21 @@ the equivalent PTN (arc weights have been omittted as all are 1).
 
 Above we have shown how to unfold two CPN subnets into PTN subnets.
 For larger color sets the unfolding yields an explosion in size, since
-we have a PTN place for each color of a CPN place and a PTN
-transition for each binding of a CPN transition. For our CPN model we
-just need to change the symbolic constant \smlcode{W}
-(cf. Fig.~\ref{fig:coloursets}) to configure the model to handle, e.g.,
-five workers. With basic Petri nets we need to add places,
+we have a PTN place for each color of a CPN place and a PTN transition
+for each binding of a CPN transition. For our CPN model we just need
+to change the symbolic constant \smlcode{W}
+(cf. Fig.~\ref{fig:coloursets}) to configure the model to handle,
+e.g., five workers. With basic Petri nets we need to add places,
 transitions, and arcs and hence change the net structure. This shows
 that CPNs (in contrast to basic Petri nets) provides a means for
 easily creating parameterizable models and also enable more compact
-modeling (as we only need a single instance of the \figitem{CanCommit}
-place in order to accommodate any number of workers). With CPN it is
-possible to have many color sets and hence we can use one color set
-for the coordinator, a second for the workers, a third for yes/no
-votes and a fourth for abort/commit decisions. With PrT nets only a
-single set of token colors is allowed (or Cartesian products thereof)
-and hence we need to encode the identity of workers, yes/no votes and
-abort/commit decisions into this single set of token colors.
+modeling. With CPN it is possible to have many color sets and hence we
+can use one color set for the coordinator, a second for the workers, a
+third for Yes/No votes and a fourth for Abort/Commit decisions. With
+PrT nets only a single set of token colors is allowed (or Cartesian
+products thereof) and hence we need to encode the identity of workers,
+Yes/No votes and Abort/Commit decisions into this single set of token
+colors.
 
 \ignore{
 The unfolding above demonstrates that Petri nets in their basic form

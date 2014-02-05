@@ -137,7 +137,7 @@ token with the color unit. In CPN ML this multi-set is written
 \smlcode{1`()} specifying one (\smlcode{1}) occurrence of
 (\smlcode{`}) the unit color (\smlcode{()}).  The number of tokens on
 a place in the current marking is indicated with a small circle
-positioned next to a place, and the detail of the color of the tokens
+positioned next to a place, and the detail of the colors of the tokens
 are provided in an associated text box. The indication of the current
 marking of a place is omitted if currently the place contains no
 tokens.
@@ -164,7 +164,7 @@ omit the details of \figitem{CollectVotes} in this paper.
 
 In the current marking shown in Fig.~\ref{fig:coordinator} only the
 transition \figitem{SendCanCommit} is enabled as indicated by the
-thick border of that transition. The requirement for a transition to
+thick border of that transition. The requirements for a transition to
 be \concept{enabled} is determined from the \concept{arc expressions}
 associated with the incoming arcs of the transition. In this case,
 there is only a single incoming arc from place \figitem{Idle}
@@ -341,7 +341,7 @@ contrast, the two bindings $b_{1Y}$ and $b_{1N}$ are not concurrently
 enabled. These two bindings are in \concept{conflict} because they
 each need the single \smlcode{wrk(1)}-token on \figitem{Idle} (and in
 fact also the single \smlcode{wrk(1)}-token on place
-\figitem{CanCommit}). The notion of concurrency and conflicts of binding
+\figitem{CanCommit}). The notion of concurrency and conflicts of bindings
 extends to bindings of different transitions. A fundamental property
 of a set of concurrently enabled bindings that CPNs inherits from Petri
 nets is that these can be executed in any interleaved order and the
@@ -351,7 +351,7 @@ execution considered.
 % a few comments about other constructed in the language
  Above relatively simple arc expressions were used. In general, arc
  expressions can be any expression that can be written in Standard ML
- as long as they have types that matches the corresponding places. In
+ as long as they have types that match the corresponding places. In
  particular, arc expressions may apply functions including
  higher-order functions. CPNs also include a notion of time inspired
  by the work of van der Aalst \cite{aalst:93} that makes it possible
