@@ -7,7 +7,7 @@ To give an informal introduction to the concepts of CPNs, we use a CPN
 model of a distributed two-phase commit transaction system.\footnote{The full details of the CPN model presented in this paper are available via \texttt{http://goo.gl/HY4ZNQ}}  The reader
 interested in the formal definition of CPNs is referred to
 \cite{newcpnbook}. The CPN model of the two-phase commit system is
-comprised of four \concept{modules} hierarchically organized into
+composed of four \concept{modules} hierarchically organized into
 three levels. Figure~\ref{fig:commit} shows the top-level module which
 consists of two \concept{substitution transitions} (drawn as
 rectangles with double-lined borders) representing the
@@ -195,7 +195,7 @@ performed without intruding intermediate steps in the model itself.
 Figure~\ref{fig:sendcancommit} shows the marking of the surrounding
 places of transition \figitem{SendCanCommit} after the occurrence of
 \figitem{SendCanCommit}. It can be seen that the place
-\figitem{CanCommit} contains two tokens (one of each worker in the
+\figitem{CanCommit} contains two tokens (one for each worker in the
 system) representing messages going to the two worker processes. The
 coordinator has now entered a state in which it is waiting to collect
 the votes from the worker processes.
@@ -225,7 +225,7 @@ accordingly named socket places in Fig.~\ref{fig:commit}. The places
 worker processes. Each of these places have the color set
 \smlcode{Worker} and the idea is that when there is a token with color
 \smlcode{wrk(i)} on, e.g., the place \figitem{Idle}, then this models
-that the i'th worker is in state idle. This makes it possible to model
+that the \smlcode{i}'th worker is in state idle. This makes it possible to model
 the state of all workers in a compact manner within a single module
 without having to have a place for each worker or a module instance
 for each worker. Initially, all workers are in the idle state as
@@ -259,7 +259,7 @@ need to bind (assign) values to these variables in order to evaluate
 the input and output arc expressions. This is done by creating a
 \concept{binding} which associates a value to each of the free
 variables occurring in the arc expressions of the transition. Bindings
-can be considered different modes in which a transition may occur.  As
+can be considered different \concept{modes} in which a transition may occur.  As
 \smlcode{w} is of type \smlcode{Worker} and \smlcode{vote} is of type
 \smlcode{Decision}, this gives the bindings listed in
 Fig.~\ref{fig:bindings} reflecting that each of the two workers may
@@ -288,7 +288,7 @@ on place \figitem{Idle} in the marking depicted in
 Fig.~\ref{fig:worker}. Similarly for the input arc expression on the
 arc from place \figitem{CanCommit}. This means that binding $b_{1Y}$
 is enabled and may occur. In fact, all four bindings listed in
-Fig.~\ref{fig:bindings} is enabled in the marking shown in
+Fig.~\ref{fig:bindings} are enabled in the marking shown in
 Fig.~\ref{fig:worker}.
 
 % ocurrence and more complicated evaluation
@@ -324,8 +324,8 @@ and adding a \smlcode{wrk(1)}-token to place \figitem{Idle}. This
 models the fact that if a worker votes no to committing the
 transaction, then it goes back to \figitem{Idle}; whereas if it votes
 yes, then it will go to \figitem{WaitingDecision}.  As this is a
-distributed system a worker cannot without exchanging messages know
-the vote of another worker.
+distributed system, a worker cannot know the vote of another worker
+without exchanging messages.
 
 % concurrency
 All four bindings listed for transition \figitem{ReceiveCanCommit}
@@ -349,13 +349,13 @@ resulting marking will be the same independently of the interleaved
 execution considered.
 
 % a few comments about other constructed in the language
- Above relatively simple arc expressions were used. In general, arc
+ So far relatively simple arc expressions were used. In general, arc
  expressions can be any expression that can be written in Standard ML
  as long as they have types that match the corresponding places. In
  particular, arc expressions may apply functions including
  higher-order functions. CPNs also include a notion of time inspired
- by the work of van der Aalst \cite{aalst:93} that makes it possible
- to model the time taken by different activities. It is based on the
+ by the work of van der Aalst \cite{aalst:93}, which makes it possible
+ to model the time taken by different activities. This is based on the
  introduction of a \concept{global clock} that represents the current
  model time and on attaching \concept{time stamps} to tokens in
  addition to the token colors. The time stamp of a token specifies the

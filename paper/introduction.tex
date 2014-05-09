@@ -12,7 +12,7 @@ applications, and multi-core computing architectures.
 % main motivation and application domain of CPNs
 
 The development of Coloured Petri Nets (CPNs) was initiated in the
-early 80'es when distributed system was becoming a major paradigm for
+early 80'es when distributed systems were becoming a major paradigm for
 future computing systems. The goal of the CPN modeling language was to
 develop a formally founded modeling language for concurrent systems
 that would make it possible to formally analyze and validate
@@ -22,14 +22,14 @@ to industrial systems. A main motivation behind the research into CPNs
 correct concurrent systems is a challenging task due to their complex
 behavior which may result in subtle bugs if not carefully designed. As
 concurrent systems are becoming still more pervasive and critical to
-society, formal techniques for concurrent system were -- and still is
+society, formal techniques for concurrent systems were -- and still is
 -- a highly relevant technology to support the engineering of reliable
 concurrent systems.
 
 % historical perspectic on development and roots
 
-At its origin, CPNs build on Petri nets (see sidebar on Petri nets)
-that were introduced by Carl Adam Petri in his doctoral thesis
+At its origin, CPNs build on Petri nets (see Sidebar~I on Petri nets),
+which were introduced by Carl Adam Petri in his doctoral thesis
 published in 1962 \cite{capetri:thesis} as a formalism for concurrency
 and synchronization. The introduction of Petri Nets by C.A. Petri was
 far ahead of the time where distributed systems were invented and
@@ -38,18 +38,18 @@ and processing were considered to be sequential and
 deterministic. Hence, it was extremely visionary of C.A. Petri to
 predict the importance of being able to understand and characterize
 the basic concepts of concurrency. In Petri nets, concurrency is a
-fundamental concept in that Petri nets is inherently based on the idea
+fundamental concept in that Petri nets are inherently based on the idea
 that behavior is (implicitly) concurrent unless explicitly
 synchronized. This is in contrast to many other modeling formalisms
 where concurrency must be explicitly introduced using parallel
 composition operators. A further advantage of Petri nets is that they
-rely on very few basic concepts, and is still able to model a wide
+rely on very few basic concepts, and are still able to model a wide
 range of communication and synchronization concepts and patterns.\\
 
 \vspace*{-1.5em}
 %\noindent\rule{\columnwidth}{0.2em}
 \paragraph*{\textsc{\textbf{SIDEBAR I: Petri Nets}}}
-Petri nets in their basic form are called Place/Transition nets (PTNs)
+A Petri net in its basic form is called Place/Transition net (PTN)
 and is a directed bi-partite graph with nodes consisting of places
 (drawn as ellipses) and transitions (drawn as rectangles). The state
 of a Petri is called a marking and consists of a distribution of
@@ -64,22 +64,23 @@ net.\hfill$\qed$ \\
 
 In the decade following the introduction by C.~A. Petri, Petri nets
 were widely accepted as one of the most well-founded theories to
-describe important behavioral concepts such as concurrency, conflict,
-synchronization and resource sharing. Petri nets were also used to
-model and analyze smaller concurrent systems. However, the practical
-use soon revealed a serious shortcoming. Petri nets (in their basic
-form) do not scale to large systems unless one models the systems at a
-very high level of abstraction. The primary reasons for this is that
-Petri nets are not well-suited for modeling systems in which data and
-manipulation of data plays a crucial role. Furthermore, Petri nets did
-not provide concepts that made it easy to scale models according to
-some system parameter, e.g,. increase the number of servers in a
-modeled system without having to make major changes to the model. This
-implied that the use of Petri nets for practical modelling was
-staggering. To remedy this situation many researchers proposed
-different ad-hoc extensions to Petri nets. This created a large zoo of
-different Petri net modeling languages. Many ad-hoc extensions were
-not well-defined, and even when they were, they often had fundamental
+describe important behavioral concepts such as concurrency, conflict
+(non-determinism), synchronization and resource sharing. Petri nets
+were also used to model and analyze smaller concurrent
+systems. However, the practical use soon revealed a serious
+shortcoming. Petri nets (in their basic form) do not scale to large
+systems unless one models the systems at a very high level of
+abstraction. The primary reasons for this is that Petri nets are not
+well-suited for modeling systems in which data and manipulation of
+data plays a crucial role. Furthermore, Petri nets did not provide
+concepts that made it easy to scale models according to some system
+parameter, e.g., increase the number of servers in a modeled system
+without having to make major changes to the model. This implied that
+the use of Petri nets for practical modelling was decelerating. To
+remedy this situation many researchers proposed different ad-hoc
+extensions to Petri nets. This created a large variety of different
+Petri net modeling languages. Many ad-hoc extensions were not
+well-defined, and even when they were, they often had fundamental
 theoretical problems. Whenever a new ad-hoc extension was introduced,
 all the basic concepts and analysis methods had to be redefined -- to
 apply for the extended Petri net language (with the ad-hoc
@@ -107,7 +108,7 @@ model different processes in a single subnet. PrT nets used arc
 expressions to define how transitions can occur in different ways
 (occurrence modes) depending on the colors of the involved input and
 output tokens. The invention of colored distinguishable tokens in PrT
-nets was a gigantic step forward -- but it still had some
+nets was a significant step forward -- but it still had some
 limitations. PrT nets only had one set of token colors, and all places
 had to use this set (or Cartesian products based on this set).
 
@@ -131,7 +132,7 @@ Huber, Jensen, and Shapiro in 1990 with the introduction of
 Hierarchical CPNs \cite{huber:91}. Their work was heavily inspired by
 the hierarchy concepts in the Structured Analysis and Design Technique
 (SADT) developed by Marca and McGowan \cite{sadt}. It was Shapiro who got
-the idea to port the SADT hierarchy concepts to CPN.  The introduction
+the idea to port the SADT hierarchy concepts to CPNs.  The introduction
 of hierarchical CPNs allowed the modeler to structure a large CPN
 model into a number of interacting and re-usable modules -- in a
 similar way as known from programming languages. This implied that
