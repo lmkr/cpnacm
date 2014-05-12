@@ -4,7 +4,7 @@
 % modules - substitution transitions
 
 To give an informal introduction to the concepts of CPNs, we use a CPN
-model of a distributed two-phase commit transaction system.\footnote{The full details of the CPN model presented in this paper are available via \texttt{http://goo.gl/HY4ZNQ}}  The reader
+model of a distributed two-phase commit transaction system.\rdc{\footnote{The full details of the CPN model presented in this paper are available via \texttt{http://goo.gl/HY4ZNQ}}}  The reader
 interested in the formal definition of CPNs is referred to
 \cite{newcpnbook}. The CPN model of the two-phase commit system is
 composed of four \concept{modules} hierarchically organized into
@@ -14,8 +14,8 @@ rectangles with double-lined borders) representing the
 \figitem{Coordinator} and the \figitem{Workers} in the system. Each of
 the substitution transitions has an associated \concept{submodule}
 that models the detailed behavior of the coordinator and the workers,
-respectively. The name of the submodule is written in the rectangular
-tag positioned at the bottom of each substitution transition.
+respectively.\rdc{The name of the submodule is written in the rectangular
+tag positioned at the bottom of each substitution transition.}
 
 \begin{figure}[b]
 \centering
@@ -107,7 +107,7 @@ the accordingly named socket places in the top-level module
 implies that any tokens added (removed) from a port place by
 transitions in the \figitem{Coordinator} module will also be added
 (removed) in the marking of the associated socket place in the
-top-level module. The places \figitem{Votes} and \figitem{Acknowledge}
+top-level module.\rdc{The places \figitem{Votes} and \figitem{Acknowledge}
 are \concept{input port places} which means that the
 \figitem{Coordinator} module will only consume tokens from these
 places.  The places \figitem{CanCommit} and \figitem{Decision} are
@@ -115,7 +115,7 @@ places.  The places \figitem{CanCommit} and \figitem{Decision} are
 \figitem{Coordinator} module will only produce tokens on these
 places. It is also possible for a place to be an \concept{input-output
   port place} which means that the module may both consume and produce
-tokens on this place.
+tokens on this place.}
 
 \begin{figure}[]
 \centering
@@ -182,8 +182,8 @@ that takes a unit value (\smlcode{()}) as parameter and returns all
 colors of the color set \smlcode{Worker}. This illustrates how complex
 calculations (e.g., of multi-sets of tokens or involving tokens with
 complex data values) can be encapsulated within function calls, and
-how several tokens can be added/removed in a single step (transition
-occurrence) without introducing intermediate states (markings).
+how several tokens can be added/removed by a single step transition
+occurrence without introducing intermediate states.
 
 \ignore{
 This illustrates that arc expression may also make
@@ -246,8 +246,8 @@ of an acknowledgment.
 The current marking of place \figitem{CanCommit} in
 Fig.~\ref{fig:worker} is \smlcode{1`wrk(1) ++ 1`wrk(2)} modeling a
 marking where the coordinator has sent a can-commit message to each
-worker. The thick border of transition \figitem{ReceiveCanCommit}
-indicates that this transition is enabled in the current marking. The
+worker.\rdc{The thick border of transition \figitem{ReceiveCanCommit}
+indicates that this transition is enabled in the current marking.} The
 arc expressions on the surrounding arcs of the
 \figitem{ReceiveCanCommit} transition are more complex than the arc
 expressions of the \figitem{SendCanCommit} transition in the
