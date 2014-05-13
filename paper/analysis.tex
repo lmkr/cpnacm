@@ -5,35 +5,53 @@ State space exploration is the main technique used for verifying
 behavioral properties of CPN models. In its basic form, a state space
 is a directed graph consisting of a node for each reachable marking of
 the CPN model and edges corresponding to occurrences of enabled
-binding elements. From a constructed state space it is possible to
-automatically verify a wide range of standard behavioral properties of
-CPN models (such as boundedness-, home-, and liveness properties). In
-addition, state spaces of CPN models can be used to perform model
-checking of behavioral properties specified in temporal logic. The
-main limitation of state space methods is the inherent state
-exploration problem which implies that the full state space is often
-too large to be explored with the available computing power. Many
-advanced techniques exist to combat the state explosion problem, and
-most of these can be applied also in the context of CPN models. The state space
-methods supported by CPN Tools have been developed by Christensen,
-Kristensen, Westergaard, Evangelista, and Mailund
+binding elements. When conducting state space exploration, CPN Tools
+explores in each encountered marking all the enabled transition
+bindings. The expressive power of CPNs means that state spaces of CPN
+models may be infinite. However, many CPN models arising in practice
+do have a finite state space (or can be modified by e.g., bounding
+data types and the number of tokens on places) to have a finite state
+space). In this case, it is possible to automatically verify a wide
+range of standard behavioral properties of CPN models (such as
+boundedness-, home-, and liveness properties). In addition, state
+spaces of CPN models can be used to perform model checking of
+behavioral properties specified in temporal logic. The main limitation
+of state space methods is the inherent state exploration problem which
+implies that the full state space is often too large to be explored
+with the available computing power. Many advanced techniques exist to
+combat the state explosion problem, and most of these can be applied
+also in the context of CPN models. The state space methods supported
+by CPN Tools have been developed by Christensen, Kristensen,
+Westergaard, Evangelista, and Mailund
 \cite{sweep,asap}. 
  \hfill
 $\qed$
 
 \vspace*{-0.75em}
-\paragraph*{\textsc{\textbf{SIDEBAR III: Performance Analysis}}}
+\paragraph*{\textsc{\textbf{SIDEBAR III: Time and Performance Analysis}}}
 
-Simulation is the main technique available for conducting performance
-analysis of (timed) CPN models. The basic idea of simulation-based
+CPNs also include a notion of time inspired by the work of van der
+Aalst \cite{aalst:93}, which makes it possible to model the time taken
+by different activities. This is based on the introduction of a
+\concept{global clock} that represents the current model time and on
+attaching \concept{time stamps} to tokens in addition to the token
+colors. The time stamp of a token specifies the earliest model time at
+which the token can be removed by the occurrence of a transition, and
+delay inscriptions on the transitions and arcs are used to determine
+the timestamps on tokens produced by transitions. During model
+execution, the global model clock is always advanced to the earliest
+next time at which a transition becomes enabled, and the model stays
+at the current model time until no more transitions are enabled. The
+time concept provides the foundation for conducting simulation-based
+performance analysis of CPN models. The basic idea of simulation-based
 performance analysis is to conduct a number of lengthy simulations
 during which data on, e.g., queue length and delays, are
 collected. Data collection is based on the concept of monitors that
 observes simulations and write the extracted data into log files for
 post processing or directly compute key performance figures such as
 averages, standard deviations, and confidence intervals. In addition,
-batch simulations can be used to explore the parameter space of the model
-and conduct multiple simulations for each parameter in order to obtain
-statistically reliable results. The support for performance
+batch simulations can be used to explore the parameter space of the
+model and conduct multiple simulations for each parameter in order to
+obtain statistically reliable results. The support for performance
 analysis is based on the work of Wells and Lindstr\o{}m
 \cite{performance1}.\hfill $\qed$

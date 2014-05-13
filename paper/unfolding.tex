@@ -4,15 +4,17 @@
 The extensions of Petri nets that CPNs bring in the form of data
 types, a programming language, and modules add practical modeling
 power to Petri nets making it feasible to create models of complex
-real systems. The extensions do not add expressive power from a
-theoretical perspective as any hierarchical CPN model can be
-\concept{unfolded} to a non-hierarchical CPN model which in turn can
-be unfolded to a behaviorally equivalent (and possibly infinite) PTN
-model. In the other direction, any PTN model can be \concept{folded}
-into a CPN model with a single module consisting of a single place and
-a single transition. In practice such a folding is not interesting,
-because the arc expressions will be extremely complex and
-non-interpretable for a human being. However, the fact that the
+real systems. PTNs extended with \concept{inhibitor arcs} allowing a
+test for zero tokens on a place can already simulate Turing machines
+and hence the CPN extensions do not add expressive power from a
+theoretical perspective. Furterhmore, any hierarchical CPN model can
+be \concept{unfolded} to a non-hierarchical CPN model which in turn
+can be unfolded to a behaviorally equivalent PTN model. In the other
+direction, any PTN model also including inhibitor arcs can be
+\concept{folded} into a CPN model with a single module consisting of a
+single place and a single transition. In practice such a folding is
+not interesting, because the arc expressions will be extremely complex
+and non-interpretable for a human being. However, the fact that the
 unfolding and folding exist shows that hierarchical CPNs have the same
 behavioral properties as basic Petri nets, and hence constitutes a
 solid model for concurrency, conflict, synchronization and resource
