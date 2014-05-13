@@ -7,7 +7,10 @@ success of CPNs as they have enabled the practical use in a broad
 range of domains such as distributed software systems, communication
 protocols, embedded systems, and process- and workflow modeling. A
 comprehensive list containing more than hundred papers describing
-practical applications and domains is available \cite{cpnuse}.
+practical applications and domains is available \cite{cpnuse}. Both
+Design/CPN and CPN Tools work direcetly on the high-level
+representation of CPN models and do not perform unfoldinf to the
+underlying PTN model (see Sect.~\ref{sect:unfolding}).
 
 % Design/CPN and CPN Tools - history
 The Design/CPN tool \cite{tacas97} was created at Meta Software,
@@ -44,12 +47,8 @@ Sidebar~III). CPN Tools is based on a much faster simulation engine
 developed by Haagh, Hansen, and Mortensen \cite{mortensen:01}. With
 this simulation engine, many models run more than thousand times
 faster compared to Design/CPN allowing complex automatic simulations
-to be executed within seconds instead of hours. The state space
-methods supported by CPN Tools have been developed by Christensen,
-Kristensen, Westergaard, Evangelista, and Mailund
-\cite{sweep,asap}. The support for performance
-analysis is based on the work of Wells and Lindstr\o{}m
-\cite{performance1}.
+to be executed within seconds instead of hours. 
+
 
 \begin{figure*}[t]
 \centering

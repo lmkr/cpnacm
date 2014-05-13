@@ -1,13 +1,15 @@
 \section{Conclusions and Perspectives}
 
-Research into CPNs has been driven by an agenda with
-simultaneous focus on theoretical development, design and
-implementation of software tool support, and practical application and
-case studies. These three aspects have had a clear mutual influence on
-each other. A theoretical foundation is needed in order to develop
+Research into CPNs has been driven by an agenda with simultaneous
+focus on theoretical development, design and implementation of
+software tool support, and practical application and case
+studies. These three aspects have had a clear mutual influence on each
+other. A theoretical foundation is needed in order to develop
 semantically sound software tools which in turn is needed for
 practical applications which reveal limitations of the theoretical
-foundation.
+foundation.\rdc{ The development of mature tool support in the form of
+Design/CPN and CPN Tools has been absolutely essentialy to the
+widespread use of CPNs.}
 
 
 \ignore{
@@ -18,21 +20,43 @@ type concept from programming languages was extremely adequate for
 type definitions and net inscriptions (instead of using more ad-hoc
 notations).}
 
+\rdc{
 The creation of the CPN language can be divided into four steps which
 have many similarities with the developments in programming
 languages. The first step from the black tokens of basic Petri nets to
-colored tokens in PrT-nets corresponds to the step from bit
-representation to simple data types. The second step from PrT-nets to
+colored tokens in PrT nets corresponds to the step from bit
+representation to simple data types. The second step from PrT nets to
 CPNs corresponds to the invention of structured data types and type
 checking. The third step with the introduction of hierarchical CPNs
 corresponds to the introduction of structuring concepts like modules,
 procedures, functions and subroutines. The fourth step represented by
 the development of Design/CPN and CPN Tools corresponds to the
 implementation of compilers and run-time systems which are essential
-for practical applications. An international standard for high-level
-Petri nets was developed headed by Billington \cite{hcpnstandard} and
+for practical applications. }
+
+In addition to CPNs, several other variants of high-level Petri nets
+and supporting computer tools have been developed based on the idea of
+extending Petri Nets with data types. One example is Well-Formed Nets
+(WFNs) \cite{wfns} as supported, e.g., by the CosyVerif tool. WFNs put
+restrictions on the colour sets and associated operations to
+facilitate space-efficient exploration of state spaces in which the
+nodes correspond to equivalence classes of states instead of single
+states. Concurrent Object-Oriented Nets \cite{coopn} as implemented in
+the COOPNBuilder tool incorporate object-oriented concepts into Petri
+nets and relies on Algebraic Petri Nets (APNs) \cite{apn} for
+specification of data types and inscriptions. APNs are high-level
+Petri Nets in which algebraic abstract data types are used for giving
+semantics to the inscriptions. Reference Nets (RNs) \cite{rns} are
+high-level Petri nets targeting agent-oriented object systems in which
+the tokens themselves may constitute references to other Petri net
+models. RNs are supported by the Renew tool which uses Java as the
+inscription language. Stochastic Well-formed Nets \cite{swns} as
+supported, e.g., by the GreatSPN tool supports performance evaluation
+based on Markov chains.An international standard for high-level Petri
+nets was developed headed by Billington \cite{hcpnstandard} and
 approved in 2004. The high-level Petri net standard is heavily based
 on CPNs which conforms to the standard.
+
 
 
 In this paper we have provided an overview and an introduction to the

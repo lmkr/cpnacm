@@ -34,7 +34,7 @@ include Statecharts \cite{statecharts}, Timed Automata
 At its origin, CPNs build on Petri nets (see Sidebar~I on Petri nets),
 which were introduced by Carl Adam Petri in his doctoral thesis
 published in 1962 \cite{capetri:thesis} as a formalism for concurrency
-and synchronization. The introduction of Petri Nets by C.A. Petri was
+and synchronization. The introduction of Petri nets by C.A. Petri was
 far ahead of the time where distributed systems were invented and
 computers started to have parallel processes. At that time, programs
 and processing were considered to be sequential and
@@ -51,17 +51,19 @@ range of communication and synchronization concepts and patterns.\\
 
 \vspace*{-1.5em}
 %\noindent\rule{\columnwidth}{0.2em}
-\paragraph*{\textsc{\textbf{SIDEBAR I: Petri Nets}}}
-A Petri net in its basic form is called Place/Transition net (PTN)
-and is a directed bi-partite graph with nodes consisting of places
-(drawn as ellipses) and transitions (drawn as rectangles). The state
-of a Petri is called a marking and consists of a distribution of
-tokens (drawn as black dots) positioned on the places. The execution
-of a Petri net (also referred to as the token game) consists of
-occurrences of enabled transitions removing tokens from input places
-and adding tokens to output places as described by integer arc weights
-thereby changing the current state (marking) of the Petri
-net.\hfill$\qed$ \\
+\paragraph*{\textsc{\textbf{SIDEBAR I: Petri nets}}}
+A Petri net in its basic form is called Place/Transition net (PTN) and
+is a directed bi-partite graph with nodes consisting of places (drawn
+as ellipses) and transitions (drawn as rectangles). The state of a
+Petri is called a marking and consists of a distribution of tokens
+(drawn as black dots) positioned on the places. The execution of a
+Petri net (also referred to as the token game) consists of occurrences
+of enabled transitions removing tokens from input places and adding
+tokens to output places as described by integer arc weights thereby
+changing the current state (marking) of the Petri net. An abundance of
+structural analysis methods (e.g., invariants and unfolding) as well
+as dynamic analysis methods (e.g., state spaces and coverability
+graphs) exists for Petri nets \cite{reisig2013}\hfill$\qed$ \\
 %\noindent\rule{\columnwidth}{0.2em}
 % disadvantages - need for further development
 

@@ -4,18 +4,23 @@
 % modules - substitution transitions
 
 To give an informal introduction to the concepts of CPNs, we use a CPN
-model of a distributed two-phase commit transaction system.\rdc{\footnote{The full details of the CPN model presented in this paper are available via \texttt{http://goo.gl/HY4ZNQ}}}  The reader
-interested in the formal definition of CPNs is referred to
+model of a distributed two-phase commit transaction
+system.\rdc{\footnote{The full details of the CPN model presented in
+    this paper are available via \texttt{http://goo.gl/HY4ZNQ}}} The
+reader interested in the formal definition of CPNs is referred to
 \cite{newcpnbook}. The CPN model of the two-phase commit system is
-composed of four \concept{modules} hierarchically organized into
-three levels. Figure~\ref{fig:commit} shows the top-level module which
+composed of four \concept{modules} hierarchically organized into three
+levels. Figure~\ref{fig:commit} shows the top-level module which
 consists of two \concept{substitution transitions} (drawn as
 rectangles with double-lined borders) representing the
 \figitem{Coordinator} and the \figitem{Workers} in the system. Each of
 the substitution transitions has an associated \concept{submodule}
 that models the detailed behavior of the coordinator and the workers,
-respectively.\rdc{The name of the submodule is written in the rectangular
-tag positioned at the bottom of each substitution transition.}
+respectively.\rdc{The name of the submodule is written in the
+  rectangular tag positioned at the bottom of each substitution
+  transition.} Substitution transitions constitute a purely
+syntactical structuring mechanism and do not occur when CPN models are
+executed.
 
 \begin{figure}[b]
 \centering
