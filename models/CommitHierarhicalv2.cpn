@@ -78,21 +78,21 @@
         <layout>var w: Worker;</layout>
       </var>
       <color id="ID1429641807">
-        <id>WorkerList</id>
+        <id>Workers</id>
         <list>
           <id>Worker</id>
         </list>
-        <layout>colset WorkerList = list Worker;</layout>
+        <layout>colset Workers = list Worker;</layout>
       </color>
       <ml id="ID1429653357">val Workers = Worker.all();
         <layout>val Workers = Worker.all();</layout>
       </ml>
       <var id="ID1429642010">
         <type>
-          <id>WorkerList</id>
+          <id>Workers</id>
         </type>
         <id>workers</id>
-        <layout>var workers : WorkerList;</layout>
+        <layout>var workers : Workers;</layout>
       </var>
       <color id="ID1429642221">
         <id>CoordinatorxWorkers</id>
@@ -960,20 +960,14 @@
       <hguideline id="ID1429910496"
                   y="-23.500000">
         <guideline_elm idref="ID1429596369"/>
-        <guideline_elm idref="ID1429933942"/>
-        <guideline_elm idref="ID1429911966"/>
       </hguideline>
       <hguideline id="ID1429910742"
                   y="120.350000">
         <guideline_elm idref="ID1429615148"/>
-        <guideline_elm idref="ID1429982645"/>
-        <guideline_elm idref="ID1429911708"/>
       </hguideline>
       <hguideline id="ID1429910901"
                   y="189.300000">
         <guideline_elm idref="ID1429601692"/>
-        <guideline_elm idref="ID1429915315"/>
-        <guideline_elm idref="ID1429979741"/>
       </hguideline>
       <hguideline id="ID1429984908"
                   y="80.000000">
@@ -983,8 +977,6 @@
       <hguideline id="ID1429988207"
                   y="46.400000">
         <guideline_elm idref="ID1429597939"/>
-        <guideline_elm idref="ID1429965423"/>
-        <guideline_elm idref="ID1429987738"/>
       </hguideline>
       <vguideline id="ID1429807551"
                   x="157.200000">
@@ -1019,8 +1011,8 @@
 Votes</text>
         <ellipse w="142.000000"
                  h="48.000000"/>
-        <token x="-23.000000"
-               y="1.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
         <marking x="0.000000"
                  y="0.000000"
                  hidden="false">
@@ -1082,7 +1074,7 @@ Acknowledgements</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1429909284">
-          <posattr x="-54.500000"
+          <posattr x="-95.500000"
                    y="-185.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -1093,7 +1085,7 @@ Acknowledgements</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="3.4.0">CoordinatorxWorkers</text>
+                version="3.4.0">Workers</text>
         </type>
         <initmark id="ID1429909285">
           <posattr x="-90.000000"
@@ -1124,8 +1116,8 @@ Acknowledgements</text>
         <text>Idle</text>
         <ellipse w="142.000000"
                  h="48.000000"/>
-        <token x="-26.000000"
-               y="1.000000"/>
+        <token x="-10.000000"
+               y="0.000000"/>
         <marking x="-1.000000"
                  y="0.000000"
                  hidden="false">
@@ -1869,7 +1861,7 @@ Acknowledgements</text>
         <transend idref="ID1429909301"/>
         <placeend idref="ID1429909283"/>
         <annot id="ID1429909316">
-          <posattr x="-136.500000"
+          <posattr x="-146.500000"
                    y="-202.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -1880,7 +1872,7 @@ Acknowledgements</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="3.4.0">(c,workers)</text>
+                version="3.4.0">workers</text>
         </annot>
       </arc>
       <arc id="ID1429909322"
@@ -1988,7 +1980,7 @@ Acknowledgements</text>
                   pattern=""
                   filled="false"/>
         <lineattr colour="Black"
-                  thick="1"
+                  thick="3"
                   type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
@@ -2020,7 +2012,7 @@ Acknowledgements</text>
                   pattern=""
                   filled="false"/>
         <lineattr colour="Black"
-                  thick="1"
+                  thick="3"
                   type="Solid"/>
         <textattr colour="Black"
                   bold="false"/>
@@ -2204,7 +2196,7 @@ Acknowledgements</text>
                 anchor.vertical="0"/>
         </marking>
         <type id="ID1429918658">
-          <posattr x="-54.500000"
+          <posattr x="-95.500000"
                    y="-274.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2215,7 +2207,7 @@ Acknowledgements</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="3.4.0">CoordinatorxWorkers</text>
+                version="3.4.0">Workers</text>
         </type>
         <initmark id="ID1429918659">
           <posattr x="-90.000000"
@@ -2657,7 +2649,7 @@ OneVote</text>
         <transend idref="ID1429918645"/>
         <placeend idref="ID1429918657"/>
         <annot id="ID1429918661">
-          <posattr x="-136.500000"
+          <posattr x="-146.500000"
                    y="-148.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -2668,7 +2660,7 @@ OneVote</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="3.4.0">(c,workers)</text>
+                version="3.4.0">workers</text>
         </annot>
       </arc>
       <arc id="ID1429918665"
@@ -3884,9 +3876,6 @@ else empty</text>
         <group_elm idref="ID1429914017"/>
         <group_elm idref="ID1429914018"/>
         <group_elm idref="ID1429951003"/>
-        <group_elm idref="ID1429913964"/>
-        <group_elm idref="ID1429913965"/>
-        <group_elm idref="ID1429913966"/>
         <group_elm idref="ID1429913990"/>
         <group_elm idref="ID1429913993"/>
         <group_elm idref="ID1429913994"/>
@@ -3898,6 +3887,9 @@ else empty</text>
         <group_elm idref="ID1429914004"/>
         <group_elm idref="ID1429914005"/>
         <group_elm idref="ID1429914010"/>
+        <group_elm idref="ID1429913964"/>
+        <group_elm idref="ID1429913965"/>
+        <group_elm idref="ID1429913966"/>
         <group_elm idref="ID1429914011"/>
         <group_elm idref="ID1429914015"/>
         <group_elm idref="ID1429914016"/>
@@ -6114,8 +6106,8 @@ Commit&apos;Worker_Waiting 1: empty</text>
     </options>
     <binders>
       <cpnbinder id="ID2222"
-                 x="350"
-                 y="74"
+                 x="599"
+                 y="89"
                  width="1108"
                  height="653">
         <sheets>
@@ -6143,8 +6135,8 @@ Commit&apos;Worker_Waiting 1: empty</text>
                     zoom="1.000000"
                     instance="ID1429909380">
             <zorder>
-              <position value="1"/>
               <position value="0"/>
+              <position value="1"/>
             </zorder>
           </cpnsheet>
           <cpnsheet id="ID1429918922"
@@ -6169,10 +6161,10 @@ Commit&apos;Worker_Waiting 1: empty</text>
         </sheets>
         <zorder>
           <position value="1"/>
-          <position value="3"/>
           <position value="0"/>
-          <position value="2"/>
           <position value="4"/>
+          <position value="3"/>
+          <position value="2"/>
         </zorder>
       </cpnbinder>
     </binders>

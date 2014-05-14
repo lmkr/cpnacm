@@ -360,7 +360,7 @@ CanCommit</text>
                    currentcyckle="2"/>
         <transend idref="ID1412323507"/>
         <placeend idref="ID1412323388"/>
-        <annot id="ID1429930559">
+        <annot id="ID1429931099">
           <posattr x="-129.000000"
                    y="0.000000"/>
           <fillattr colour="White"
@@ -392,7 +392,7 @@ CanCommit</text>
                    currentcyckle="2"/>
         <transend idref="ID1412323507"/>
         <placeend idref="ID1412323721"/>
-        <annot id="ID1429930560">
+        <annot id="ID1429931100">
           <posattr x="-129.000000"
                    y="-84.000000"/>
           <fillattr colour="White"
@@ -424,7 +424,7 @@ CanCommit</text>
                    currentcyckle="2"/>
         <transend idref="ID1412323507"/>
         <placeend idref="ID1412324130"/>
-        <annot id="ID1429930561">
+        <annot id="ID1429931101">
           <posattr x="-49.000000"
                    y="-6.000000"/>
           <fillattr colour="White"
@@ -456,7 +456,7 @@ CanCommit</text>
                    currentcyckle="2"/>
         <transend idref="ID1412323507"/>
         <placeend idref="ID1412324623"/>
-        <annot id="ID1429930562">
+        <annot id="ID1429931102">
           <posattr x="-43.000000"
                    y="-51.000000"/>
           <fillattr colour="White"
@@ -921,7 +921,7 @@ CanCommitNo</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930563">
+        <annot id="ID1429931103">
           <posattr x="-120.000000"
                    y="26.000000"/>
           <fillattr colour="White"
@@ -953,7 +953,7 @@ CanCommitNo</text>
                    currentcyckle="2"/>
         <transend idref="ID1412329120"/>
         <placeend idref="ID1412329129"/>
-        <annot id="ID1429930564">
+        <annot id="ID1429931104">
           <posattr x="-233.000000"
                    y="-29.000000"/>
           <fillattr colour="White"
@@ -985,7 +985,7 @@ CanCommitNo</text>
                    currentcyckle="2"/>
         <transend idref="ID1412329120"/>
         <placeend idref="ID1412329132"/>
-        <annot id="ID1429930565">
+        <annot id="ID1429931105">
           <posattr x="-224.000000"
                    y="25.000000"/>
           <fillattr colour="White"
@@ -1030,7 +1030,7 @@ CanCommitNo</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930566">
+        <annot id="ID1429931106">
           <posattr x="-120.000000"
                    y="-66.000000"/>
           <fillattr colour="White"
@@ -1075,7 +1075,7 @@ CanCommitNo</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930567">
+        <annot id="ID1429931107">
           <posattr x="6.000000"
                    y="26.000000"/>
           <fillattr colour="White"
@@ -1120,7 +1120,7 @@ CanCommitNo</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930568">
+        <annot id="ID1429931108">
           <posattr x="6.000000"
                    y="-63.000000"/>
           <fillattr colour="White"
@@ -1165,7 +1165,7 @@ CanCommitNo</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930569">
+        <annot id="ID1429931109">
           <posattr x="-36.000000"
                    y="5.000000"/>
           <fillattr colour="White"
@@ -1210,7 +1210,7 @@ CanCommitNo</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930570">
+        <annot id="ID1429931110">
           <posattr x="-72.000000"
                    y="-57.000000"/>
           <fillattr colour="White"
@@ -1259,26 +1259,18 @@ CanCommitNo</text>
         <group_elm idref="ID1412344532"/>
         <group_elm idref="ID1412329138"/>
         <group_elm idref="ID1412410762"/>
-        <group_elm idref="ID1429909912"/>
         <group_elm idref="ID1412329140"/>
-        <group_elm idref="ID1429909913"/>
         <group_elm idref="ID1412329142"/>
-        <group_elm idref="ID1429909914"/>
         <group_elm idref="ID1412339531"/>
         <group_elm idref="ID1412402466"/>
-        <group_elm idref="ID1429909915"/>
         <group_elm idref="ID1412344905"/>
         <group_elm idref="ID1412354003"/>
-        <group_elm idref="ID1429909916"/>
         <group_elm idref="ID1412345641"/>
         <group_elm idref="ID1412370793"/>
-        <group_elm idref="ID1429909917"/>
         <group_elm idref="ID1412347135"/>
         <group_elm idref="ID1412418922"/>
-        <group_elm idref="ID1429909918"/>
         <group_elm idref="ID1412367657"/>
         <group_elm idref="ID1412406643"/>
-        <group_elm idref="ID1429909919"/>
       </group>
       <group id="ID1429910350"
              name="Group 2">
@@ -1309,26 +1301,18 @@ CanCommitNo</text>
         <group_elm idref="ID1412344532"/>
         <group_elm idref="ID1412329138"/>
         <group_elm idref="ID1412410762"/>
-        <group_elm idref="ID1429909912"/>
         <group_elm idref="ID1412329140"/>
-        <group_elm idref="ID1429909913"/>
         <group_elm idref="ID1412329142"/>
-        <group_elm idref="ID1429909914"/>
         <group_elm idref="ID1412339531"/>
         <group_elm idref="ID1412402466"/>
-        <group_elm idref="ID1429909915"/>
         <group_elm idref="ID1412344905"/>
         <group_elm idref="ID1412354003"/>
-        <group_elm idref="ID1429909916"/>
         <group_elm idref="ID1412345641"/>
         <group_elm idref="ID1412370793"/>
-        <group_elm idref="ID1429909917"/>
         <group_elm idref="ID1412347135"/>
         <group_elm idref="ID1412418922"/>
-        <group_elm idref="ID1429909918"/>
         <group_elm idref="ID1412367657"/>
         <group_elm idref="ID1412406643"/>
-        <group_elm idref="ID1429909919"/>
       </group>
       <group id="ID1429910513"
              name="Group 3">
@@ -1359,26 +1343,18 @@ CanCommitNo</text>
         <group_elm idref="ID1412344532"/>
         <group_elm idref="ID1412329138"/>
         <group_elm idref="ID1412410762"/>
-        <group_elm idref="ID1429909912"/>
         <group_elm idref="ID1412329140"/>
-        <group_elm idref="ID1429909913"/>
         <group_elm idref="ID1412329142"/>
-        <group_elm idref="ID1429909914"/>
         <group_elm idref="ID1412339531"/>
         <group_elm idref="ID1412402466"/>
-        <group_elm idref="ID1429909915"/>
         <group_elm idref="ID1412344905"/>
         <group_elm idref="ID1412354003"/>
-        <group_elm idref="ID1429909916"/>
         <group_elm idref="ID1412345641"/>
         <group_elm idref="ID1412370793"/>
-        <group_elm idref="ID1429909917"/>
         <group_elm idref="ID1412347135"/>
         <group_elm idref="ID1412418922"/>
-        <group_elm idref="ID1429909918"/>
         <group_elm idref="ID1412367657"/>
         <group_elm idref="ID1412406643"/>
-        <group_elm idref="ID1429909919"/>
       </group>
     </page>
     <page id="ID1429910369">
@@ -1504,7 +1480,7 @@ wrk1Yes</text>
 wrk1</text>
         <ellipse w="86.000000"
                  h="46.000000"/>
-        <token x="-17.000000"
+        <token x="-57.000000"
                y="27.000000"/>
         <marking x="0.000000"
                  y="0.000000"
@@ -1770,8 +1746,8 @@ wrk2Yes</text>
 wrk2</text>
         <ellipse w="86.000000"
                  h="46.000000"/>
-        <token x="-18.000000"
-               y="28.000000"/>
+        <token x="-57.000000"
+               y="27.000000"/>
         <marking x="0.000000"
                  y="0.000000"
                  hidden="true">
@@ -2245,7 +2221,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930571">
+        <annot id="ID1429931111">
           <posattr x="-152.000000"
                    y="69.000000"/>
           <fillattr colour="White"
@@ -2277,7 +2253,7 @@ CanCommitNo2</text>
                    currentcyckle="2"/>
         <transend idref="ID1429910690"/>
         <placeend idref="ID1429910705"/>
-        <annot id="ID1429930572">
+        <annot id="ID1429931112">
           <posattr x="-253.000000"
                    y="11.000000"/>
           <fillattr colour="White"
@@ -2309,7 +2285,7 @@ CanCommitNo2</text>
                    currentcyckle="2"/>
         <transend idref="ID1429910690"/>
         <placeend idref="ID1429910708"/>
-        <annot id="ID1429930573">
+        <annot id="ID1429931113">
           <posattr x="-235.000000"
                    y="74.000000"/>
           <fillattr colour="White"
@@ -2354,7 +2330,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930574">
+        <annot id="ID1429931114">
           <posattr x="-151.000000"
                    y="-23.000000"/>
           <fillattr colour="White"
@@ -2399,7 +2375,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930575">
+        <annot id="ID1429931115">
           <posattr x="-26.000000"
                    y="69.000000"/>
           <fillattr colour="White"
@@ -2444,7 +2420,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930576">
+        <annot id="ID1429931116">
           <posattr x="-25.000000"
                    y="-19.000000"/>
           <fillattr colour="White"
@@ -2489,7 +2465,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930577">
+        <annot id="ID1429931117">
           <posattr x="-67.000000"
                    y="48.000000"/>
           <fillattr colour="White"
@@ -2534,7 +2510,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930578">
+        <annot id="ID1429931118">
           <posattr x="-103.000000"
                    y="-14.000000"/>
           <fillattr colour="White"
@@ -2579,7 +2555,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930579">
+        <annot id="ID1429931119">
           <posattr x="230.000000"
                    y="68.000000"/>
           <fillattr colour="White"
@@ -2611,7 +2587,7 @@ CanCommitNo2</text>
                    currentcyckle="2"/>
         <transend idref="ID1429910818"/>
         <placeend idref="ID1429910833"/>
-        <annot id="ID1429930580">
+        <annot id="ID1429931120">
           <posattr x="303.000000"
                    y="10.000000"/>
           <fillattr colour="White"
@@ -2643,7 +2619,7 @@ CanCommitNo2</text>
                    currentcyckle="2"/>
         <transend idref="ID1429910818"/>
         <placeend idref="ID1429910836"/>
-        <annot id="ID1429930581">
+        <annot id="ID1429931121">
           <posattr x="287.000000"
                    y="74.000000"/>
           <fillattr colour="White"
@@ -2688,7 +2664,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930582">
+        <annot id="ID1429931122">
           <posattr x="230.000000"
                    y="-24.000000"/>
           <fillattr colour="White"
@@ -2733,7 +2709,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930583">
+        <annot id="ID1429931123">
           <posattr x="104.000000"
                    y="67.000000"/>
           <fillattr colour="White"
@@ -2778,7 +2754,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930584">
+        <annot id="ID1429931124">
           <posattr x="104.000000"
                    y="-24.000000"/>
           <fillattr colour="White"
@@ -2823,7 +2799,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930585">
+        <annot id="ID1429931125">
           <posattr x="110.000000"
                    y="49.000000"/>
           <fillattr colour="White"
@@ -2868,7 +2844,7 @@ CanCommitNo2</text>
           <textattr colour="Black"
                     bold="false"/>
         </bendpoint>
-        <annot id="ID1429930586">
+        <annot id="ID1429931126">
           <posattr x="146.000000"
                    y="-12.000000"/>
           <fillattr colour="White"
@@ -2896,7 +2872,6 @@ CanCommitNo2</text>
              name="Group 1">
         <group_elm idref="ID1429910824"/>
         <group_elm idref="ID1429910827"/>
-        <group_elm idref="ID1429930557"/>
         <group_elm idref="ID1429910829"/>
         <group_elm idref="ID1429910825"/>
         <group_elm idref="ID1429910826"/>
@@ -2908,7 +2883,6 @@ CanCommitNo2</text>
         <group_elm idref="ID1429930583"/>
         <group_elm idref="ID1429910818"/>
         <group_elm idref="ID1429910821"/>
-        <group_elm idref="ID1429930556"/>
         <group_elm idref="ID1429910823"/>
         <group_elm idref="ID1429910819"/>
         <group_elm idref="ID1429910820"/>
@@ -2974,7 +2948,12 @@ CanCommitNo2</text>
           <text>&lt;same as model&gt;</text>
         </value>
       </option>
-      <option name="extensions.10008.enable">
+      <option name="extensions.10002.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10006.enable">
         <value>
           <boolean>true</boolean>
         </value>
@@ -2989,34 +2968,9 @@ CanCommitNo2</text>
           <boolean>true</boolean>
         </value>
       </option>
-      <option name="extensions.10006.enable">
-        <value>
-          <boolean>true</boolean>
-        </value>
-      </option>
       <option name="extensions.10001.enable">
         <value>
           <boolean>true</boolean>
-        </value>
-      </option>
-      <option name="extensions.10007.enable">
-        <value>
-          <boolean>true</boolean>
-        </value>
-      </option>
-      <option name="extensions.10002.enable">
-        <value>
-          <boolean>true</boolean>
-        </value>
-      </option>
-      <option name="extensions.10004.enable">
-        <value>
-          <boolean>true</boolean>
-        </value>
-      </option>
-      <option name="extensions.10007.options.discover">
-        <value>
-          <boolean>false</boolean>
         </value>
       </option>
       <option name="repavg">
@@ -3325,17 +3279,9 @@ CanCommitNo2</text>
           <IndexNode expanded="false"/>
           <IndexNode expanded="false"/>
           <IndexNode expanded="false"/>
-          <IndexNode expanded="false"/>
-          <IndexNode expanded="false"/>
-          <IndexNode expanded="false"/>
-        </IndexNode>
-        <IndexNode expanded="false">
-          <IndexNode expanded="false"/>
         </IndexNode>
       </IndexNode>
-      <IndexNode expanded="false">
-        <IndexNode expanded="false"/>
-      </IndexNode>
+      <IndexNode expanded="false"/>
       <IndexNode expanded="false">
         <IndexNode expanded="false">
           <IndexNode expanded="true"/>
