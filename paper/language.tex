@@ -24,7 +24,7 @@ executed.
 
 \begin{figure}[b]
 \centering
-\includegraphics[scale=.5]{figures/Commit.eps}
+\includegraphics[scale=.43]{figures/Commit.eps}
 \caption{The top-level module of the CPN model.}
 \label{fig:commit}
 \end{figure}
@@ -78,6 +78,7 @@ colset WorkerxDecision = product Worker * Decision;
 var w : Worker;
 var vote : Vote;
 \end{verbatim}
+\vspace*{-1em}
 \caption{Definition of color sets used in Fig.~\ref{fig:commit}.}
 \label{fig:coloursets}
 \end{figure}
@@ -124,7 +125,7 @@ tokens on this place.}
 
 \begin{figure}[]
 \centering
-\includegraphics[scale=.45]{figures/Coordinator.eps}
+\includegraphics[scale=.43]{figures/Coordinator.eps}
 \caption{The \figitem{Coordinator} module.}
 \label{fig:coordinator}
 \end{figure}
@@ -138,14 +139,14 @@ coordinator when executing the two-phase commit protocol. The places
 \smlcode{UNIT} containing just a single value \smlcode{()} (denoted
 unit). Initially, the coordinator is in an idle state as modeled by
 the initial marking of place \figitem{Idle} which consists of a single
-token with the color unit. In CPN ML this multi-set is written
+token with the color unit. In CPN ML this is written as
 \smlcode{1`()} specifying one (\smlcode{1}) occurrence of
 (\smlcode{`}) the unit color (\smlcode{()}).  The number of tokens on
 a place in the current marking is indicated with a small circle
 positioned next to a place, and the detail of the colors of the tokens
-are provided in an associated text box. The indication of the current
+are provided in an associated text box.\rdc{The indication of the current
 marking of a place is omitted if currently the place contains no
-tokens.
+tokens.}
 
 The transitions \figitem{SendCanCommit}, \figitem{CollectVotes}, and
 \figitem{Receive\linebreak[4]Acknowledgements} model the
@@ -207,7 +208,7 @@ the votes from the worker processes.
 
 \begin{figure}[b]
 \centering
-\includegraphics[scale=.45]{figures/SendCanCommit.eps}
+\includegraphics[scale=.43]{figures/SendCanCommit.eps}
 \caption{Current marking after \figitem{SendCanCommit}.}
 \label{fig:sendcancommit}
 \end{figure}
@@ -243,7 +244,7 @@ of an acknowledgment.
 
 \begin{figure}[]
 \centering
-\includegraphics[scale=.45]{figures/Workers.eps}
+\includegraphics[scale=.43]{figures/Workers.eps}
 \caption{The \figitem{Workers} module.}
 \label{fig:worker}
 \end{figure}
@@ -278,6 +279,7 @@ b_{1N} & = & \langle \smlcode{w} = \smlcode{wrk(1)}, \smlcode{vote} = \smlcode{N
 b_{2Y} & = & \langle \smlcode{w} = \smlcode{wrk(2)}, \smlcode{vote} = \smlcode{Yes} \rangle \\
 b_{2N} & = & \langle \smlcode{w} = \smlcode{wrk(2)}, \smlcode{vote} = \smlcode{No} \rangle
 \end{eqnarray*}
+%\vspace*{-0.5em}
 \caption{Bindings of transition \figitem{ReceiveCanCommit}.}
 \label{fig:bindings}
 \end{figure}
@@ -316,7 +318,7 @@ the marking resulting from an occurrence of the $b_{1Y}$ binding.
 
 \begin{figure}[b]
 \centering
-\includegraphics[scale=.45]{figures/ReceiveCanCommit.eps}
+\includegraphics[scale=.43]{figures/ReceiveCanCommit.eps}
 \caption{Current marking after \figitem{ReceiveCanCommit}.}
 \label{fig:receivecancommit}
 \end{figure}
