@@ -60,7 +60,7 @@ containing pairs consisting of a worker and its vote. The color set
 coordinator decides to \smlcode{Abort} or \smlcode{Commit} the
 transaction (only if all workers vote yes will the transaction be
 committed). It should be noted that in addition to the type
-constructors introduced above, CPN ML supports union, lists, and
+constructors introduced above, CPN ML supports union, list, and
 record types. The variables \smlcode{w} and \smlcode{vote} declared in
 Fig.~\ref{fig:coloursets} will be introduced later.
 
@@ -188,7 +188,7 @@ that takes a unit value (\smlcode{()}) as parameter and returns all
 colors of the color set \smlcode{Worker}. This illustrates how complex
 calculations (e.g., of multi-sets of tokens or involving tokens with
 complex data values) can be encapsulated within function calls, and
-how several tokens can be added/removed by a single step transition
+how several tokens can be added/removed by a single transition
 occurrence without introducing intermediate states.
 
 \ignore{
