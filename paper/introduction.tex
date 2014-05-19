@@ -52,10 +52,10 @@ range of communication and synchronization concepts and patterns.\\
 \vspace*{-1.5em}
 %\noindent\rule{\columnwidth}{0.2em}
 \paragraph*{\textsc{\textbf{SIDEBAR I: Petri nets}}}
-A Petri net in its basic form is called Place/Transition net (PTN) and
+A Petri net in its basic form is called a Place/Transition net (PTN) and
 is a directed bi-partite graph with nodes consisting of places (drawn
 as ellipses) and transitions (drawn as rectangles). The state of a
-Petri is called a marking and consists of a distribution of tokens
+Petri net is called a marking and consists of a distribution of tokens
 (drawn as black dots) positioned on the places. The execution of a
 Petri net (also referred to as the token game) consists of occurrences
 of enabled transitions removing tokens from input places and adding
@@ -63,14 +63,14 @@ tokens to output places as described by integer arc weights thereby
 changing the current state (marking) of the Petri net. An abundance of
 structural analysis methods (e.g., invariants and net reductions) as
 well as dynamic analysis methods (e.g., state spaces and coverability
-graphs) exists for Petri nets \cite{murata:89}\hfill$\qed$ \\
+graphs) exists for Petri nets \cite{girault}\hfill$\qed$ \\
 %\noindent\rule{\columnwidth}{0.2em}
 % disadvantages - need for further development
 
 In the decade following the introduction by C.~A. Petri, Petri nets
 were widely accepted as one of the most well-founded theories to
 describe important behavioral concepts such as concurrency, conflict
-(non-determinism), synchronization and resource sharing. Petri nets
+(non-determinism), synchronization, and resource sharing. Petri nets
 were also used to model and analyze smaller concurrent
 systems. However, the practical use soon revealed a serious
 shortcoming. Petri nets (in their basic form) do not scale to large

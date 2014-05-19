@@ -206,7 +206,7 @@ system) representing messages going to the two worker processes. The
 coordinator has now entered a state in which it is waiting to collect
 the votes from the worker processes.
 
-\begin{figure}[b]
+\begin{figure}[t]
 \centering
 \includegraphics[scale=.43]{figures/SendCanCommit.eps}
 \caption{Current marking after \figitem{SendCanCommit}.}
@@ -242,12 +242,6 @@ of a vote. The transition \figitem{ReceiveDecision} models the
 reception of a decision message from the coordinator and the sending
 of an acknowledgment.
 
-\begin{figure}[]
-\centering
-\includegraphics[scale=.43]{figures/Workers.eps}
-\caption{The \figitem{Workers} module.}
-\label{fig:worker}
-\end{figure}
 
 The current marking of place \figitem{CanCommit} in
 Fig.~\ref{fig:worker} is \smlcode{1`wrk(1) ++ 1`wrk(2)} modeling a
@@ -270,6 +264,14 @@ can be considered different \concept{modes} in which a transition may occur.  As
 \smlcode{Decision}, this gives the bindings listed in
 Fig.~\ref{fig:bindings} reflecting that each of the two workers may
 vote \smlcode{Yes} or \smlcode{No} to committing the transactions.
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=.43]{figures/Workers.eps}
+\caption{The \figitem{Workers} module.}
+\label{fig:worker}
+\end{figure}
+
 
 \begin{figure}[]
 \centering
@@ -316,7 +318,7 @@ arc from \figitem{ReceiveCanCommit} to \figitem{Idle} evaluates to the
 \figitem{Idle} in this case. Figure~\ref{fig:receivecancommit} shows
 the marking resulting from an occurrence of the $b_{1Y}$ binding.
 
-\begin{figure}[b]
+\begin{figure}[t]
 \centering
 \includegraphics[scale=.43]{figures/ReceiveCanCommit.eps}
 \caption{Current marking after \figitem{ReceiveCanCommit}.}
@@ -338,7 +340,7 @@ without exchanging messages.
 All four bindings listed for transition \figitem{ReceiveCanCommit}
 were enabled in the marking shown in Fig.~\ref{fig:worker}. Enabled
 bindings may be \concept{concurrently enabled} if each binding can get
-its required multi-set of tokens from each input place independently
+its required tokens from each input place independently
 of the other enabled bindings in the set. As an example, the two
 bindings $b_{1Y}$ and $b_{2Y}$ are concurrently enabled since each
 binding can get its token from the input places without sharing with
